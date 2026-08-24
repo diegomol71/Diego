@@ -1,0 +1,493 @@
+<title>GORO Holding Check</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap');
+
+  :root {
+    color-scheme: light;
+    --bg-page:        #f7f3ea;
+    --bg-surface:     #ffffff;
+    --bg-surface-2:   #faf6ee;
+    --text-primary:   #201a10;
+    --text-secondary: #5c5344;
+    --text-muted:     #8a8171;
+    --border:         rgba(32,26,16,0.12);
+    --border-strong:  rgba(32,26,16,0.20);
+    --accent:         #99671d;
+    --accent-ink:     #7a521a;
+    --accent-soft:    #f1e3c3;
+    --accent-soft-bd: rgba(153,103,29,0.35);
+    --good:           #006300;
+    --good-strong:    #0ca30c;
+    --bad:            #d03b3b;
+    --neutral-bar:    #c3c2b7;
+    --shadow:         rgba(32,26,16,0.07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg-page:        #131110;
+      --bg-surface:     #1c1912;
+      --bg-surface-2:   #221d14;
+      --text-primary:   #f4efe4;
+      --text-secondary: #c2b8a4;
+      --text-muted:     #93897a;
+      --border:         rgba(244,239,228,0.12);
+      --border-strong:  rgba(244,239,228,0.20);
+      --accent:         #dda54f;
+      --accent-ink:     #f0c37f;
+      --accent-soft:    #2c2312;
+      --accent-soft-bd: rgba(221,165,79,0.40);
+      --good:           #3fc23f;
+      --good-strong:    #0ca30c;
+      --bad:            #ef6b64;
+      --neutral-bar:    #4a4436;
+      --shadow:         rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg-page:        #131110;
+    --bg-surface:     #1c1912;
+    --bg-surface-2:   #221d14;
+    --text-primary:   #f4efe4;
+    --text-secondary: #c2b8a4;
+    --text-muted:     #93897a;
+    --border:         rgba(244,239,228,0.12);
+    --border-strong:  rgba(244,239,228,0.20);
+    --accent:         #dda54f;
+    --accent-ink:     #f0c37f;
+    --accent-soft:    #2c2312;
+    --accent-soft-bd: rgba(221,165,79,0.40);
+    --good:           #3fc23f;
+    --good-strong:    #0ca30c;
+    --bad:            #ef6b64;
+    --neutral-bar:    #4a4436;
+    --shadow:         rgba(0,0,0,0.35);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg-page);
+    color: var(--text-primary);
+    font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 15.5px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 20px 64px; }
+
+  h1, h2, h3 { font-family: "Archivo", system-ui, sans-serif; margin: 0; text-wrap: balance; }
+  .num { font-family: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace; font-variant-numeric: tabular-nums; }
+
+  a { color: var(--accent-ink); }
+
+  /* ---------- header ---------- */
+  header.top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-strong);
+    margin-bottom: 22px;
+  }
+  .brand-block { display: flex; flex-direction: column; gap: 6px; }
+  .eyebrow {
+    font-family: "Archivo", sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent-ink);
+  }
+  h1.title { font-size: clamp(1.7rem, 3.4vw, 2.35rem); font-weight: 800; letter-spacing: -0.01em; }
+  .subline { color: var(--text-secondary); font-size: 14.5px; }
+  .price-block { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; }
+  .price-row { display: flex; align-items: baseline; gap: 10px; }
+  .price-now { font-size: clamp(2.1rem, 4vw, 2.7rem); font-weight: 700; letter-spacing: -0.01em; }
+  .price-change {
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    background: var(--good-strong);
+  }
+  .price-change.down { background: var(--bad); }
+  .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+  .src-badge {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 9px;
+  }
+  .src-badge b { color: var(--text-primary); font-weight: 700; }
+
+  /* ---------- layout ---------- */
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; }
+  .card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px 22px;
+    box-shadow: 0 1px 2px var(--shadow);
+  }
+  .span-12 { grid-column: span 12; }
+  .span-8  { grid-column: span 8; }
+  .span-4  { grid-column: span 4; }
+  .span-6  { grid-column: span 6; }
+  @media (max-width: 880px) {
+    .span-8, .span-6, .span-4 { grid-column: span 12; }
+  }
+
+  .card h2 {
+    font-size: 1.02rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+  }
+  .card .card-sub { color: var(--text-muted); font-size: 13px; margin-bottom: 14px; }
+
+  /* ---------- portfolio table ---------- */
+  table.port { width: 100%; border-collapse: collapse; margin-top: 6px; }
+  table.port th {
+    text-align: right;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding: 0 8px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  table.port th:first-child, table.port td:first-child { text-align: left; }
+  table.port td {
+    padding: 10px 8px;
+    text-align: right;
+    border-bottom: 1px solid var(--border);
+    font-size: 14.5px;
+  }
+  table.port tr:last-child td { border-bottom: none; font-weight: 700; }
+  table.port td.acct { font-family: "Archivo", sans-serif; font-weight: 600; }
+  .gl-pill { display: inline-block; padding: 2px 9px; border-radius: 999px; color: #fff; font-weight: 700; font-size: 13px; background: var(--bad); }
+  .gl-pill.up { background: var(--good-strong); }
+
+  /* ---------- chart ---------- */
+  .chart-row { display: flex; gap: 22px; margin-top: 18px; flex-wrap: wrap; }
+  .chart-panel { flex: 1 1 220px; min-width: 210px; }
+  .chart-panel .panel-label { font-family: "Archivo", sans-serif; font-weight: 700; font-size: 13px; margin-bottom: 2px; }
+  .chart-panel .panel-pct { font-size: 12.5px; font-weight: 700; margin-bottom: 8px; }
+  .chart-panel .panel-pct.down { color: var(--bad); }
+  .chart-panel .panel-pct.up { color: var(--good); }
+  .bars { display: flex; align-items: flex-end; gap: 14px; height: 190px; border-bottom: 1px solid var(--border-strong); padding: 0 4px; }
+  .bar-col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; flex: 1; gap: 6px; }
+  .bar-val { font-size: 11.5px; font-weight: 600; color: var(--text-secondary); white-space: nowrap; }
+  .bar { width: 100%; max-width: 46px; border-radius: 5px 5px 2px 2px; }
+  .bar.cost { background: var(--neutral-bar); }
+  .bar.value.down { background: var(--bad); }
+  .bar.value.up { background: var(--good-strong); }
+  .bar-tags { display: flex; justify-content: space-around; margin-top: 8px; }
+  .bar-tag { font-size: 11px; color: var(--text-muted); text-align: center; flex: 1; }
+  .legend-row { display: flex; gap: 16px; margin-top: 14px; font-size: 12px; color: var(--text-secondary); }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .swatch { width: 11px; height: 11px; border-radius: 3px; display: inline-block; }
+
+  /* ---------- stat grid ---------- */
+  .stat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+  @media (max-width: 480px) { .stat-grid { grid-template-columns: 1fr; } }
+  .stat {
+    background: var(--bg-surface-2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .stat .k { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 3px; }
+  .stat .v { font-size: 15px; font-weight: 700; }
+  .stat .v.flag { color: var(--bad); }
+  .stat .sub { font-size: 11.5px; color: var(--text-secondary); margin-top: 2px; }
+
+  /* ---------- insider callout ---------- */
+  .insider-card { background: linear-gradient(180deg, var(--accent-soft), var(--bg-surface) 70%); border-color: var(--accent-soft-bd); }
+  .insider-row { display: flex; gap: 14px; align-items: flex-start; padding: 10px 0; border-bottom: 1px dashed var(--border); }
+  .insider-row:last-child { border-bottom: none; }
+  .insider-amt { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 15px; min-width: 128px; color: var(--accent-ink); }
+  .insider-desc { font-size: 14px; color: var(--text-secondary); }
+  .insider-desc b { color: var(--text-primary); }
+
+  /* ---------- volume callout ---------- */
+  .vol-strip { display: flex; gap: 24px; flex-wrap: wrap; align-items: center; }
+  .vol-num { display: flex; flex-direction: column; }
+  .vol-num .v { font-size: 1.5rem; font-weight: 700; }
+  .vol-num .k { font-size: 11.5px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .vol-multiple { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 1.6rem; color: var(--accent-ink); }
+
+  /* ---------- news / lists ---------- */
+  ul.clean { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+  ul.clean li { padding-left: 16px; position: relative; font-size: 14.5px; }
+  ul.clean li::before { content: "—"; position: absolute; left: 0; color: var(--text-muted); }
+
+  /* ---------- analyst ---------- */
+  .analyst-split { display: flex; gap: 14px; flex-wrap: wrap; }
+  .analyst-box { flex: 1 1 200px; border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; background: var(--bg-surface-2); }
+  .analyst-box .rating { font-family: "Archivo", sans-serif; font-weight: 800; font-size: 1.15rem; }
+  .analyst-box.sell .rating { color: var(--bad); }
+  .analyst-box.buy .rating { color: var(--good); }
+  .analyst-box .src { font-size: 11.5px; color: var(--text-muted); margin-top: 4px; }
+
+  /* ---------- catalyst timeline ---------- */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-item { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .tl-item:last-child { border-bottom: none; }
+  .tl-date { font-family: "JetBrains Mono", monospace; font-weight: 700; font-size: 13px; color: var(--accent-ink); min-width: 118px; }
+  .tl-body b { font-weight: 700; }
+  .tl-body .note { color: var(--text-secondary); font-size: 13.5px; }
+  .tl-tag { display: inline-block; font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; padding: 1px 7px; border-radius: 5px; margin-left: 8px; background: var(--accent-soft); color: var(--accent-ink); border: 1px solid var(--accent-soft-bd); }
+
+  /* ---------- trend ---------- */
+  .trend-card p { font-size: 15px; color: var(--text-primary); margin: 0 0 12px; }
+  .disclaimer { font-size: 12.5px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 12px; margin-top: 6px; }
+  .verify-line { font-size: 12.5px; color: var(--text-muted); text-align: center; margin-top: 26px; }
+  footer.foot { text-align: center; font-size: 11.5px; color: var(--text-muted); margin-top: 10px; }
+
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+
+  <header class="top">
+    <div class="brand-block">
+      <span class="eyebrow">Intraday Holding Check</span>
+      <h1 class="title">GORO — Goldgroup Mining</h1>
+      <span class="subline">Monday, August 24, 2026 · quote as of 12:11&nbsp;PM PDT / 3:11&nbsp;PM ET</span>
+    </div>
+    <div class="price-block">
+      <div class="price-row">
+        <span class="price-now num">$3.56</span>
+        <span class="price-change up">+$0.37 (+11.60%)</span>
+      </div>
+      <div class="badge-row">
+        <span class="src-badge">Price: <b>Finnhub</b> (live quote, primary source)</span>
+        <span class="src-badge">Volume: <b>Yahoo Finance</b> (Finnhub candle endpoint restricted on this API tier)</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <!-- PORTFOLIO -->
+    <section class="card span-12">
+      <h2>Portfolio Value &amp; Gain/Loss</h2>
+      <div class="card-sub">At $3.56/share · blended cost basis $3.8829/share across 11,754 combined shares</div>
+
+      <table class="port">
+        <thead>
+          <tr><th>Account</th><th>Shares</th><th>Cost/sh</th><th>Cost Basis</th><th>Value Now</th><th>Gain/Loss</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="acct">Merrill Lynch</td>
+            <td class="num">10,857</td>
+            <td class="num">$3.89</td>
+            <td class="num">$42,233.73</td>
+            <td class="num">$38,650.92</td>
+            <td><span class="gl-pill">&minus;$3,582.81 (&minus;8.48%)</span></td>
+          </tr>
+          <tr>
+            <td class="acct">Charles Schwab</td>
+            <td class="num">897</td>
+            <td class="num">$3.80</td>
+            <td class="num">$3,408.60</td>
+            <td class="num">$3,193.32</td>
+            <td><span class="gl-pill">&minus;$215.28 (&minus;6.32%)</span></td>
+          </tr>
+          <tr>
+            <td class="acct">Combined</td>
+            <td class="num">11,754</td>
+            <td class="num">$3.8829</td>
+            <td class="num">$45,642.33</td>
+            <td class="num">$41,844.24</td>
+            <td><span class="gl-pill">&minus;$3,798.09 (&minus;8.32%)</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="chart-row">
+        <div class="chart-panel">
+          <div class="panel-label">Merrill Lynch</div>
+          <div class="panel-pct down">&minus;8.48% vs. cost</div>
+          <div class="bars">
+            <div class="bar-col">
+              <span class="bar-val num">$42,234</span>
+              <div class="bar cost" style="height:190px;" title="Cost basis: $42,233.73"></div>
+            </div>
+            <div class="bar-col">
+              <span class="bar-val num">$38,651</span>
+              <div class="bar value down" style="height:174px;" title="Value now: $38,650.92"></div>
+            </div>
+          </div>
+          <div class="bar-tags"><span class="bar-tag">Cost Basis</span><span class="bar-tag">Value Now</span></div>
+        </div>
+
+        <div class="chart-panel">
+          <div class="panel-label">Charles Schwab</div>
+          <div class="panel-pct down">&minus;6.32% vs. cost</div>
+          <div class="bars">
+            <div class="bar-col">
+              <span class="bar-val num">$3,409</span>
+              <div class="bar cost" style="height:190px;" title="Cost basis: $3,408.60"></div>
+            </div>
+            <div class="bar-col">
+              <span class="bar-val num">$3,193</span>
+              <div class="bar value down" style="height:178px;" title="Value now: $3,193.32"></div>
+            </div>
+          </div>
+          <div class="bar-tags"><span class="bar-tag">Cost Basis</span><span class="bar-tag">Value Now</span></div>
+        </div>
+
+        <div class="chart-panel">
+          <div class="panel-label">Combined</div>
+          <div class="panel-pct down">&minus;8.32% vs. cost</div>
+          <div class="bars">
+            <div class="bar-col">
+              <span class="bar-val num">$45,642</span>
+              <div class="bar cost" style="height:190px;" title="Cost basis: $45,642.33"></div>
+            </div>
+            <div class="bar-col">
+              <span class="bar-val num">$41,844</span>
+              <div class="bar value down" style="height:174px;" title="Value now: $41,844.24"></div>
+            </div>
+          </div>
+          <div class="bar-tags"><span class="bar-tag">Cost Basis</span><span class="bar-tag">Value Now</span></div>
+        </div>
+      </div>
+
+      <div class="legend-row">
+        <span class="legend-item"><span class="swatch" style="background:var(--neutral-bar);"></span>Cost basis</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--bad);"></span>Value now — below cost</span>
+        <span class="legend-item"><span class="swatch" style="background:var(--good-strong);"></span>Value now — above cost</span>
+      </div>
+    </section>
+
+    <!-- FUNDAMENTALS -->
+    <section class="card span-6">
+      <h2>Fundamentals &amp; Risk</h2>
+      <div class="card-sub">TTM figures unless noted · concise, not comprehensive</div>
+      <div class="stat-grid">
+        <div class="stat"><div class="k">Total Cash (MRQ)</div><div class="v">$15.37M</div></div>
+        <div class="stat"><div class="k">Net Margin (TTM)</div><div class="v flag">&minus;138.44%</div><div class="sub">Net loss &minus;$54.81M · EPS &minus;$0.84</div></div>
+        <div class="stat"><div class="k">Levered FCF (TTM)</div><div class="v" style="color:var(--good);">+$36.91M</div><div class="sub">Positive despite the GAAP loss above</div></div>
+        <div class="stat"><div class="k">Current Ratio</div><div class="v flag">0.5</div><div class="sub">Weak short-term liquidity</div></div>
+        <div class="stat"><div class="k">Accruals</div><div class="v flag">306.9%</div><div class="sub">Highest in the Gold industry — earnings-quality flag</div></div>
+        <div class="stat"><div class="k">Dividend</div><div class="v">None</div></div>
+        <div class="stat"><div class="k">Beta</div><div class="v">&minus;0.58 / 0.21</div><div class="sub">Yahoo (5yr) vs. LSEG (6% correlation) — trades largely independent of the market</div></div>
+        <div class="stat"><div class="k">90-Day Volatility</div><div class="v flag">Top 1%</div><div class="sub">More volatile than 99% of S&amp;P 500 names</div></div>
+        <div class="stat"><div class="k">50 / 200-Day MA</div><div class="v num">$3.54 / $4.12</div><div class="sub">Today's $3.56 is back above the 50-day, still below the 200-day (as of 8/20 close $3.00)</div></div>
+        <div class="stat"><div class="k">Market Cap</div><div class="v">~$240–430M*</div><div class="sub">*Varies by source (Yahoo/LSEG/Schwab) — no single figure confirmed</div></div>
+      </div>
+    </section>
+
+    <!-- INSIDER -->
+    <section class="card span-6 insider-card">
+      <h2>🪙 Insider &amp; Ownership — a real positive counterweight</h2>
+      <div class="card-sub">Set against the weak GAAP profile at left</div>
+      <div class="insider-row">
+        <span class="insider-amt num">325,000 sh</span>
+        <span class="insider-desc"><b>Eric Sprott</b> (10% holder, credible precious-metals investor) bought on the open market <b>8/14/26 at $3.893/share</b> (~$1.27M) — almost identical to Diego's own $3.89 Merrill Lynch cost basis.</span>
+      </div>
+      <div class="insider-row">
+        <span class="insider-amt num">2,552,371 sh</span>
+        <span class="insider-desc">Sprott-affiliated entity <b>2176423 Ontario</b> holds 7.9% / 10.7M shares (per LSEG).</span>
+      </div>
+      <div class="insider-row">
+        <span class="insider-amt num">1,520,000 sh</span>
+        <span class="insider-desc">Interim CEO <b>Javier Reyes</b> holds 1.1% of shares outstanding.</span>
+      </div>
+    </section>
+
+    <!-- VOLUME -->
+    <section class="card span-12">
+      <h2>Volume / Unusual Activity</h2>
+      <div class="vol-strip">
+        <div class="vol-num"><span class="v num">1,725,387</span><span class="k">Today's volume (Yahoo, running)</span></div>
+        <div class="vol-multiple">≈2.2×</div>
+        <div class="vol-num"><span class="v num">793,208</span><span class="k">Baseline avg. volume (set 8/21/26)</span></div>
+        <div class="vol-num"><span class="v num">+11.60%</span><span class="k">Today's move on that volume</span></div>
+      </div>
+      <p style="margin-top:12px; font-size:13.5px; color:var(--text-secondary);">
+        Today's volume is running ~118% above the confirmed 793,208 baseline (set on the 8/21/26 session, +6.33% on 1,288,934 shares). One search result cited a higher trailing average (~1.39M) reflecting last week's elevated activity — held to the confirmed baseline above pending direct verification. For context, the past week has been unusually heavy across the board: 8/20 traded ~3.57M shares (its heaviest session, +6.0% to $3.00) and 8/21 traded ~1.32M (+6.33% to $3.19) — so today's pace, while still well above baseline, is not yet the week's high.
+      </p>
+    </section>
+
+    <!-- NEWS -->
+    <section class="card span-6">
+      <h2>News (last 24–48h)</h2>
+      <ul class="clean">
+        <li>No new material company announcements found in this window beyond items already on record: the San Francisco 26,053m drill-program start (8/14) and the Don David high-grade drill results (8/17).</li>
+        <li>Today's +11.6% move on ~2.2× average volume appears to be momentum/positioning-driven — continuation of last week's operational newsflow and the Sprott buy, not a new catalyst.</li>
+        <li>No new insider Form 4 / SEDI filings found beyond Sprott's confirmed 8/14 purchase.</li>
+      </ul>
+    </section>
+
+    <!-- ANALYST -->
+    <section class="card span-6">
+      <h2>Analyst Coverage</h2>
+      <div class="card-sub">No update found superseding the 8/21–8/22 split — treat as unreliable, not a consensus</div>
+      <div class="analyst-split">
+        <div class="analyst-box sell">
+          <div class="rating">CFRA — Sell</div>
+          <div class="src">Schwab widget · 8/22/26</div>
+        </div>
+        <div class="analyst-box buy">
+          <div class="rating">LSEG — Buy</div>
+          <div class="src">Target $1.75 · 8/21/26</div>
+        </div>
+      </div>
+      <p style="margin-top:12px; font-size:13px; color:var(--text-muted);">LSEG shows 0 analysts in formal coverage; the two ratings above contradict each other and neither should be treated as a reliable signal on its own. Other price targets surfacing in general search (e.g. HC Wainwright, ~$1.25&ndash;$1.50) date to August 2025 on the pre-merger entity and are stale — not a current read.</p>
+    </section>
+
+    <!-- CATALYST WATCH -->
+    <section class="card span-12">
+      <h2>Catalyst Watch</h2>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Aug 28, 2026</div>
+          <div class="tl-body"><b>Earnings (estimated, Yahoo)</b><span class="tl-tag">4 trading days out</span><div class="note">Not yet confirmed by the company — flagging as it approaches.</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Ongoing</div>
+          <div class="tl-body"><b>Don David drill results</b><div class="note">25,726m / 123 holes through 7/31; high-grade Au-Ag intercepts reported 8/17. Further tranches expected.</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Ongoing</div>
+          <div class="tl-body"><b>San Francisco / El Llano</b><div class="note">26,053m drill program underway at San Francisco (~1.23M oz M&amp;I gold resource) feeding the Q4 2026 restart study; El Llano remains an unproven 40–78Mt conceptual exploration target.</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Q4 2026</div>
+          <div class="tl-body"><b>San Francisco technical restart study</b><span class="tl-tag">Key catalyst</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Ongoing</div>
+          <div class="tl-body"><b>Permanent CEO search</b><div class="note">Javier Reyes (Board Chair) has served as Interim CEO since 7/27/26.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TREND -->
+    <section class="card span-12 trend-card">
+      <h2>Short-Term Trend Estimate</h2>
+      <p>GORO is up sharply intraday (+11.60% to $3.56, ~2.2× average volume), reclaiming its 50-day moving average on continued momentum from last week's operational newsflow and Eric Sprott's $1.27M open-market buy at essentially Diego's own cost basis — a genuine insider-conviction signal that offsets, but doesn't erase, a weak GAAP profile (TTM net loss &minus;$54.8M, current ratio 0.5, elevated accruals) that is nonetheless paired with positive TTM levered free cash flow (+$36.9M). With an estimated earnings date just four trading days out (Aug 28), low/inconsistent correlation to the broad market, and fragmented, contradictory analyst coverage (CFRA Sell vs. LSEG Buy $1.75 target) offering no reliable consensus, near-term price action looks likely to stay volatility- and positioning-driven rather than fundamentals-driven until that print and the Q4 2026 San Francisco restart study land. The standing catalyst stack — San Francisco's ~1.23M oz M&amp;I resource plus the unproven El Llano target, ongoing Don David drill results, and a supportive gold macro backdrop (mainstream desks clustering $4,000&ndash;$4,900/oz by year-end) — remains intact and unclaimed by today's move.</p>
+      <div class="disclaimer">This report is informational only and is not financial advice. It is not a recommendation to buy, sell, or hold GORO or any security. Figures are drawn from Finnhub, Yahoo Finance, and public filings/news as cited, and may lag real-time brokerage data.</div>
+    </section>
+
+  </div>
+
+  <div class="verify-line">Verify the exact current price and account values against the Merrill Lynch and Charles Schwab apps before acting on this report.</div>
+  <footer class="foot">Generated for Diego · GORO / Goldgroup Mining Inc. (TSXV: GGA · NYSE American: GORO · FSE: 55G0)</footer>
+</div>
