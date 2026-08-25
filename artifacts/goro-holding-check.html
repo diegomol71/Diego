@@ -263,6 +263,7 @@
         <span class="src-badge">Price: <b>Finnhub</b> (live quote, primary source)</span>
         <span class="src-badge">Volume: <b>Yahoo Finance</b> (Finnhub candle endpoint restricted on this API tier)</span>
         <span class="src-badge">Cross-check: <b>TradingView</b> $3.53, mkt cap $429M — consistent</span>
+        <span class="src-badge">Enriched: <b>goldgroupmining.com</b> (official site — cash, share count, Back Forty asset)</span>
       </div>
     </div>
   </header>
@@ -348,7 +349,7 @@
       <h2>Fundamentals &amp; Risk</h2>
       <div class="card-sub">TTM figures unless noted · concise, not comprehensive</div>
       <div class="stat-grid">
-        <div class="stat"><div class="k">Total Cash (MRQ)</div><div class="v">$15.37M</div></div>
+        <div class="stat"><div class="k">Cash, No Debt</div><div class="v">$46M</div><div class="sub">Company-reported (goldgroupmining.com), as of June 2026 — more current than the $15.37M MRQ figure from data aggregators</div></div>
         <div class="stat"><div class="k">Net Margin (TTM)</div><div class="v flag">&minus;138.44%</div><div class="sub">Net loss &minus;$54.81M · EPS &minus;$0.84</div></div>
         <div class="stat"><div class="k">Levered FCF (TTM)</div><div class="v" style="color:var(--good);">+$36.91M</div><div class="sub">Positive despite the GAAP loss above</div></div>
         <div class="stat"><div class="k">Current Ratio</div><div class="v flag">0.5</div><div class="sub">Weak short-term liquidity</div></div>
@@ -357,7 +358,7 @@
         <div class="stat"><div class="k">Beta</div><div class="v">&minus;0.58 / 0.21 / 2.22</div><div class="sub">Yahoo (5yr) / LSEG (6% correlation) / TradingView — sources disagree; treat direction, not magnitude, as the signal</div></div>
         <div class="stat"><div class="k">90-Day Volatility</div><div class="v flag">Top 1%</div><div class="sub">More volatile than 99% of S&amp;P 500 names</div></div>
         <div class="stat"><div class="k">50 / 200-Day MA</div><div class="v num">$3.54 / $4.12</div><div class="sub">Today's $3.53 sits essentially at the 50-day, still below the 200-day (as of 8/20 close $3.00)</div></div>
-        <div class="stat"><div class="k">Market Cap</div><div class="v">$429–430M</div><div class="sub">TradingView &amp; Schwab agree here; Yahoo's ~$240M figure is a stale outlier</div></div>
+        <div class="stat"><div class="k">Market Cap</div><div class="v">~$478M</div><div class="sub">135,419,619 sh (company-reported, 8/19/26) &times; $3.53 — higher than TradingView/Schwab's $429&ndash;430M, which likely use a smaller/stale share count; Yahoo's ~$240M is a clear outlier</div></div>
         <div class="stat"><div class="k">TradingView Technical Rating</div><div class="v">Neutral (1wk) / Buy (1mo)</div><div class="sub">Composite of oscillators &amp; moving averages — not a fundamental call</div></div>
       </div>
     </section>
@@ -372,7 +373,7 @@
       </div>
       <div class="insider-row">
         <span class="insider-amt num">2,552,371 sh</span>
-        <span class="insider-desc">Sprott-affiliated entity <b>2176423 Ontario</b> holds 7.9% / 10.7M shares (per LSEG; that share basis may not yet reflect the post-merger count).</span>
+        <span class="insider-desc">Sprott-affiliated entity <b>2176423 Ontario</b> holds 2,552,371 sh. LSEG reports this as 7.9%, but against the company's own official count (135,419,619 sh, 8/19/26) that's <b>~1.9%</b> — the two don't reconcile; treat LSEG's % as unverified. Sprott's <i>combined</i> holdings (multiple entities) are separately reported as a 10% position.</span>
       </div>
       <div class="insider-row">
         <span class="insider-amt num">1,520,000 sh</span>
@@ -435,11 +436,15 @@
         </div>
         <div class="tl-item">
           <div class="tl-date">Ongoing</div>
-          <div class="tl-body"><b>San Francisco / El Llano</b><div class="note">26,053m drill program underway at San Francisco (~1.23M oz M&amp;I gold resource) feeding the Q4 2026 restart study; El Llano remains an unproven 40–78Mt conceptual exploration target.</div></div>
+          <div class="tl-body"><b>San Francisco / El Llano</b><div class="note">26,053m drill program underway at San Francisco (~1.23M oz M&amp;I gold resource) feeding a year-end 2026 restart decision, targeting an actual restart in 2027 per the company's own strategic roadmap; El Llano remains an unproven 40–78Mt conceptual exploration target.</div></div>
         </div>
         <div class="tl-item">
           <div class="tl-date">Q4 2026</div>
           <div class="tl-body"><b>San Francisco technical restart study</b><span class="tl-tag">Key catalyst</span></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Longer-term</div>
+          <div class="tl-body"><b>Back Forty (Michigan, USA)</b><div class="note">4th 100%-owned asset — open-pit/underground VMS project, disclosed on the company's own site but not in prior versions of this report. Development-stage: still needs a feasibility study and permitting, no near-term catalyst. Part of the stated goal of reaching 250,000 oz AuEq as an intermediate producer.</div></div>
         </div>
         <div class="tl-item">
           <div class="tl-date">Ongoing</div>
@@ -451,7 +456,7 @@
     <!-- TREND -->
     <section class="card span-12 trend-card">
       <h2>Short-Term Trend Estimate</h2>
-      <p>GORO is up sharply today (+10.66% to $3.53, ~2.8× average volume), sitting essentially at its 50-day moving average on continued momentum from last week's operational newsflow and Eric Sprott's $1.27M open-market buy at essentially Diego's own cost basis — a genuine insider-conviction signal that offsets, but doesn't erase, a weak GAAP profile (TTM net loss &minus;$54.8M, current ratio 0.5, elevated accruals) that is nonetheless paired with positive TTM levered free cash flow (+$36.9M). Part of the stock's recent extreme volatility has reportedly been mechanical (index-reconstitution-driven forced selling tied to the merger close) rather than purely fundamentals-driven, which argues against over-reading any single day's move. With an estimated earnings date just four trading days out (Aug 28), low/inconsistent correlation to the broad market, and fragmented, contradictory analyst coverage (CFRA Sell vs. LSEG Buy $1.75 target) offering no reliable consensus, near-term price action looks likely to stay volatility- and positioning-driven rather than fundamentals-driven until that print and the Q4 2026 San Francisco restart study land. The standing catalyst stack — San Francisco's ~1.23M oz M&amp;I resource plus the unproven El Llano target, ongoing Don David drill results, and a supportive gold macro backdrop (mainstream desks clustering $4,000&ndash;$4,900/oz by year-end) — remains intact and unclaimed by today's move.</p>
+      <p>GORO is up sharply today (+10.66% to $3.53, ~2.8× average volume), sitting essentially at its 50-day moving average on continued momentum from last week's operational newsflow and Eric Sprott's $1.27M open-market buy at essentially Diego's own cost basis — a genuine insider-conviction signal that offsets, but doesn't erase, a weak GAAP profile (TTM net loss &minus;$54.8M, current ratio 0.5, elevated accruals) that is nonetheless paired with positive TTM levered free cash flow (+$36.9M) and a company-reported $46M cash position with zero debt as of June 2026 — a more current and comfortable liquidity picture than the older $15.37M MRQ figure alone would suggest. Part of the stock's recent extreme volatility has reportedly been mechanical (index-reconstitution-driven forced selling tied to the merger close) rather than purely fundamentals-driven, which argues against over-reading any single day's move. With an estimated earnings date just four trading days out (Aug 28), low/inconsistent correlation to the broad market, and fragmented, contradictory analyst coverage (CFRA Sell vs. LSEG Buy $1.75 target) offering no reliable consensus, near-term price action looks likely to stay volatility- and positioning-driven rather than fundamentals-driven until that print and the Q4 2026 San Francisco restart study land. The standing catalyst stack — San Francisco's ~1.23M oz M&amp;I resource plus the unproven El Llano target, ongoing Don David drill results, and a supportive gold macro backdrop (mainstream desks clustering $4,000&ndash;$4,900/oz by year-end) — remains intact and unclaimed by today's move.</p>
       <div class="disclaimer">This report is informational only and is not financial advice. It is not a recommendation to buy, sell, or hold GORO or any security. Figures are drawn from Finnhub, Yahoo Finance, and public filings/news as cited, and may lag real-time brokerage data.</div>
     </section>
 
