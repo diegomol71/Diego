@@ -1,0 +1,21 @@
+mkdir -p .claude
+cat > .claude/settings.json <<'EOF'
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push:*)",
+      "Bash(git commit:*)",
+      "Bash(git add:*)",
+      "Bash(git status:*)",
+      "Bash(git log:*)",
+      "Bash(git diff:*)",
+      "Bash(git clone:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)"
+    ]
+  }
+}
+EOF
+git add .claude/settings.json
+git commit -m "Allow routine git operations without prompting"
+git push
