@@ -89,6 +89,7 @@
 
   .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 24px 56px; }
 
+  /* Header */
   header.top {
     display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
     gap: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border-strong);
@@ -113,6 +114,7 @@
   .badge b { color: var(--ink); font-weight: 600; }
   .badge.warn { background: var(--warn-soft); color: var(--warn-text); border-color: transparent; }
 
+  /* Section shell */
   section { margin-bottom: 22px; }
   .card {
     background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
@@ -126,18 +128,21 @@
   .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
   @media (max-width: 880px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
 
+  /* Portfolio table */
   table.pf { width: 100%; border-collapse: collapse; margin-top: 4px; }
   table.pf th { text-align: right; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); font-weight: 600; padding: 0 0 8px; }
   table.pf th:first-child, table.pf td:first-child { text-align: left; }
   table.pf td { text-align: right; padding: 9px 0; border-top: 1px solid var(--border); font-size: 14.5px; }
   table.pf tr.total td { border-top: 1px solid var(--border-strong); font-weight: 700; }
   table.pf td.loss { color: var(--critical); }
+  table.pf td.gain { color: var(--good-text); }
   table.pf td.acct { font-weight: 600; }
 
   .chart-wrap svg { width: 100%; height: auto; display: block; }
-  .legend-row { display: flex; gap: 18px; justify-content: center; margin-top: 6px; font-size: 12.5px; color: var(--ink-2); }
+  .legend-row { display: flex; gap: 18px; justify-content: center; margin-top: 6px; font-size: 12.5px; color: var(--ink-2); flex-wrap: wrap; }
   .legend-row .sw { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; }
 
+  /* Stat tiles */
   .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; }
   .stat { padding: 12px 0 0; border-top: 1px solid var(--border); }
   .stat .label { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 5px; }
@@ -146,6 +151,7 @@
   .stat .value.bad { color: var(--critical); }
   .stat .sub { font-size: 12.5px; color: var(--ink-2); margin-top: 2px; }
 
+  /* Callout */
   .callout { display: flex; gap: 14px; align-items: flex-start; }
   .callout .icon-dot { width: 8px; height: 8px; border-radius: 50%; margin-top: 7px; flex: none; }
   .callout .icon-dot.good { background: var(--good); }
@@ -153,13 +159,14 @@
 
   ul.clean { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
   ul.clean li { padding-left: 16px; position: relative; }
-  ul.clean li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
+  ul.clean li::before { content: "\2013"; position: absolute; left: 0; color: var(--muted); }
 
   .mismatch-box {
     margin-top: 12px; padding: 12px 14px; background: var(--warn-soft); border-radius: 10px;
     font-size: 13px; color: var(--warn-text);
   }
 
+  /* Catalyst timeline */
   .cat-list { display: flex; flex-direction: column; gap: 0; }
   .cat-item { display: grid; grid-template-columns: 108px 1fr; gap: 16px; padding: 12px 0; border-top: 1px solid var(--border); }
   .cat-item:first-child { border-top: none; }
@@ -183,21 +190,21 @@
     <div>
       <div class="ticker-block">
         <span class="ticker mono">GORO</span>
-        <span class="company-name">Goldgroup Mining Inc. · NYSE American</span>
+        <span class="company-name">Goldgroup Mining Inc. &middot; NYSE American</span>
       </div>
-      <div class="as-of">Intraday check &middot; Thu, Aug 27 2026 &middot; 8:33am PT / 11:33am ET</div>
+      <div class="as-of">Intraday check &middot; Thu, Aug 27 2026 &middot; 8:53am PT / 11:53am ET</div>
     </div>
     <div class="price-block">
-      <div class="price num">$3.79</div>
-      <div class="change up num">+$0.23 (+6.46%) vs prior close $3.56</div>
+      <div class="price num">$3.85</div>
+      <div class="change up num">+$0.29 (+8.15%) vs prior close $3.56</div>
     </div>
   </header>
 
   <div class="badges">
-    <span class="badge">Price source: <b>Finnhub</b> (live quote &mdash; WebFetch, cross-verified via direct curl)</span>
-    <span class="badge warn">Volume history: Finnhub candle endpoint returned an API-tier restriction this run (not a network block) &mdash; no live volume figure to compare vs. the ~793K baseline this check</span>
-    <span class="badge">TradingView cross-check: price $3.72, market cap $519.83M &mdash; broadly consistent with Finnhub; its shown &minus;8.01% change conflicts with Finnhub &mdash; direction/magnitude taken from Finnhub</span>
-    <span class="badge">Company-site check: goldgroupmining.com/investors reachable &mdash; share count reconfirmed unchanged; cash/debt figure not restated on the page this run, baseline retained</span>
+    <span class="badge">Price source: <b>Finnhub</b> (live quote, WebFetch, 11:53am ET)</span>
+    <span class="badge warn">Volume: Finnhub candle endpoint returned an API-plan restriction again this run &mdash; Yahoo's volume figure is unchanged from the prior check 18 min ago and Yahoo itself flags the page as delayed, so treat as stale/indicative only</span>
+    <span class="badge warn">TradingView cross-check: price $3.83 consistent with Finnhub, but its shown &minus;8.01% change conflicts with Finnhub/Yahoo's +8% (likely a stale/cached read) &mdash; direction/magnitude taken from Finnhub</span>
+    <span class="badge">Company-site check: goldgroupmining.com + /investors reachable &mdash; cash, official share count &amp; all four assets confirmed unchanged; site separately notes ~$72M pro forma cash if all warrants are exercised</span>
   </div>
 
   <section>
@@ -212,63 +219,63 @@
             <tr>
               <td class="acct">Merrill Lynch</td>
               <td class="num">10,857</td>
-              <td class="num">$3.89</td>
-              <td class="num">$42,233.73</td>
-              <td class="num">$41,148.03</td>
-              <td class="num loss">&minus;$1,085.70</td>
-              <td class="num loss">&minus;2.57%</td>
+              <td class="num">$3.8512</td>
+              <td class="num">$41,812.48</td>
+              <td class="num">$41,799.45</td>
+              <td class="num loss">&minus;$13.03</td>
+              <td class="num loss">&minus;0.03%</td>
             </tr>
             <tr>
               <td class="acct">Charles Schwab</td>
               <td class="num">897</td>
               <td class="num">$3.80</td>
               <td class="num">$3,408.60</td>
-              <td class="num">$3,399.63</td>
-              <td class="num loss">&minus;$8.97</td>
-              <td class="num loss">&minus;0.26%</td>
+              <td class="num">$3,453.45</td>
+              <td class="num gain">+$44.85</td>
+              <td class="num gain">+1.32%</td>
             </tr>
             <tr class="total">
               <td class="acct">Combined</td>
               <td class="num">11,754</td>
-              <td class="num">$3.883</td>
-              <td class="num">$45,642.33</td>
-              <td class="num">$44,547.66</td>
-              <td class="num loss">&minus;$1,094.67</td>
-              <td class="num loss">&minus;2.40%</td>
+              <td class="num">$3.8473</td>
+              <td class="num">$45,221.08</td>
+              <td class="num">$45,252.90</td>
+              <td class="num gain">+$31.82</td>
+              <td class="num gain">+0.07%</td>
             </tr>
           </tbody>
         </table>
-        <div class="as-of" style="margin-top:10px;">Blended cost basis: $3.883/share. Verify exact figures against your brokerage app &mdash; intraday price still moving.</div>
+        <div class="as-of" style="margin-top:10px;">Blended cost basis: $3.8473/share &mdash; live price is now essentially at breakeven against the combined position. Verify exact figures against your brokerage app; intraday price is still moving.</div>
       </div>
       <div class="chart-wrap">
-        <svg viewBox="0 0 930 330" role="img" aria-label="Bar chart comparing cost basis to current value for Merrill Lynch, Charles Schwab, and Combined accounts, each showing a small unrealized loss">
+        <svg viewBox="0 0 930 330" role="img" aria-label="Bar chart comparing cost basis to current value for Merrill Lynch, Charles Schwab, and Combined accounts: a slight loss for Merrill Lynch, a gain for Charles Schwab, and a slight net gain Combined">
           <text x="165" y="40" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--ink)" font-family="IBM Plex Sans, sans-serif">Merrill Lynch</text>
           <text x="465" y="40" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--ink)" font-family="IBM Plex Sans, sans-serif">Charles Schwab</text>
           <text x="765" y="40" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--ink)" font-family="IBM Plex Sans, sans-serif">Combined</text>
 
-          <text x="165" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;2.6%</text>
-          <text x="465" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;0.3%</text>
-          <text x="765" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;2.4%</text>
+          <text x="165" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;0.03%</text>
+          <text x="465" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--good-text)" font-family="IBM Plex Mono, monospace">+1.32%</text>
+          <text x="765" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--good-text)" font-family="IBM Plex Mono, monospace">+0.07%</text>
 
           <line x1="40" y1="260" x2="890" y2="260" stroke="var(--border-strong)" stroke-width="1"/>
 
-          <!-- Merrill Lynch: cost $42,234 (full 128px), value $41,148 (124.7px, -3.3px) -->
+          <!-- Merrill Lynch: -0.03% (essentially flat, tiny loss) -->
           <rect x="84" y="132" width="68" height="128" rx="4" style="fill:var(--neutral-bar)"/>
-          <rect x="178" y="135.3" width="68" height="124.7" rx="4" style="fill:var(--critical)"/>
-          <text x="118" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--ink-2)" font-family="IBM Plex Mono, monospace">$42,234</text>
-          <text x="212" y="123.3" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$41,148</text>
+          <rect x="178" y="132.04" width="68" height="127.96" rx="4" style="fill:var(--critical)"/>
+          <text x="118" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--ink-2)" font-family="IBM Plex Mono, monospace">$41,812</text>
+          <text x="212" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$41,799</text>
 
-          <!-- Charles Schwab: cost $3,409 (full 128px), value $3,400 (127.7px, -0.3px) -->
+          <!-- Charles Schwab: +1.32% gain -->
           <rect x="384" y="132" width="68" height="128" rx="4" style="fill:var(--neutral-bar)"/>
-          <rect x="478" y="132.3" width="68" height="127.7" rx="4" style="fill:var(--critical)"/>
+          <rect x="478" y="130.32" width="68" height="129.68" rx="4" style="fill:var(--good)"/>
           <text x="418" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--ink-2)" font-family="IBM Plex Mono, monospace">$3,409</text>
-          <text x="512" y="120.3" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$3,400</text>
+          <text x="512" y="118" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--good-text)" font-family="IBM Plex Mono, monospace">$3,453</text>
 
-          <!-- Combined: cost $45,642 (full 128px), value $44,548 (124.9px, -3.1px) -->
+          <!-- Combined: +0.07% gain -->
           <rect x="684" y="132" width="68" height="128" rx="4" style="fill:var(--neutral-bar)"/>
-          <rect x="778" y="135.1" width="68" height="124.9" rx="4" style="fill:var(--critical)"/>
-          <text x="718" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--ink-2)" font-family="IBM Plex Mono, monospace">$45,642</text>
-          <text x="812" y="123.1" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$44,548</text>
+          <rect x="778" y="131.91" width="68" height="128.09" rx="4" style="fill:var(--good)"/>
+          <text x="718" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--ink-2)" font-family="IBM Plex Mono, monospace">$45,221</text>
+          <text x="812" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--good-text)" font-family="IBM Plex Mono, monospace">$45,253</text>
 
           <text x="165" y="280" text-anchor="middle" font-size="12" style="fill:var(--muted)" font-family="IBM Plex Sans, sans-serif">10,857 sh</text>
           <text x="465" y="280" text-anchor="middle" font-size="12" style="fill:var(--muted)" font-family="IBM Plex Sans, sans-serif">897 sh</text>
@@ -276,7 +283,8 @@
         </svg>
         <div class="legend-row">
           <span><span class="sw" style="background:var(--neutral-bar)"></span>Cost Basis</span>
-          <span><span class="sw" style="background:var(--critical)"></span>Current Value (unrealized loss)</span>
+          <span><span class="sw" style="background:var(--good)"></span>Current Value (gain)</span>
+          <span><span class="sw" style="background:var(--critical)"></span>Current Value (loss)</span>
         </div>
       </div>
     </div>
@@ -299,7 +307,7 @@
         <div class="stat">
           <div class="label">Cash / Debt</div>
           <div class="value num">$46M / $0</div>
-          <div class="sub">As of June 2026 (company-reported); not restated on the investors page this run</div>
+          <div class="sub">As of June 2026; company site notes ~$72M pro forma post warrant exercise</div>
         </div>
         <div class="stat">
           <div class="label">Current Ratio</div>
@@ -319,12 +327,12 @@
         <div class="stat">
           <div class="label">Moving Averages</div>
           <div class="value num">Above 50d / Below 200d</div>
-          <div class="sub">50d $3.54, 200d $4.12 vs live $3.79</div>
+          <div class="sub">50d $3.54, 200d $4.12 vs live $3.85</div>
         </div>
         <div class="stat">
           <div class="label">Market Cap (computed)</div>
-          <div class="value num">$513.2M</div>
-          <div class="sub">135.42M basic shares &times; $3.79 live ($573.2M fully diluted). TradingView independently shows $519.83M &mdash; close agreement. Aggregators (Yahoo ~$240M, LSEG ~$369M) appear to use smaller/stale share counts.</div>
+          <div class="value num">$521.4M</div>
+          <div class="sub">135.42M basic shares &times; $3.85 live ($582.3M fully diluted). TradingView independently shows $519.83M &mdash; close agreement. Yahoo's own figure has improved to ~$506.5M (vs. the stale ~$240M flagged previously). LSEG (~$369M) and Schwab (~$430M) still look low, likely a smaller/stale share count.</div>
         </div>
       </div>
     </div>
@@ -334,7 +342,7 @@
       <div class="callout">
         <span class="icon-dot good"></span>
         <div>
-          <b>Eric Sprott bought 325,000 shares</b> on the open market 8/14/26 at $3.893/share (~$1.27M) &mdash; nearly identical to Diego's own $3.89 Merrill Lynch cost basis. His affiliated entity <span class="mono">2176423 Ontario</span> holds 2,552,371 shares.
+          <b>Eric Sprott bought 325,000 shares</b> on the open market 8/14/26 at $3.893/share (~$1.27M) &mdash; almost identical to Diego's own $3.8512 Merrill Lynch cost basis. His affiliated entity <span class="mono">2176423 Ontario</span> holds 2,552,371 shares.
         </div>
       </div>
       <div class="mismatch-box">
@@ -352,17 +360,17 @@
       <h2>Volume &amp; Unusual Activity</h2>
       <div class="stat-grid">
         <div class="stat" style="border-top:none; padding-top:0;">
-          <div class="label">Today's Volume</div>
-          <div class="value num">Unavailable this run</div>
-          <div class="sub">Finnhub's candle/volume endpoint returned an API-tier restriction (confirmed via direct curl, not a network block). No live figure to compare against the ~793,208 baseline (8/21 avg) this check.</div>
+          <div class="label">Today's Volume (delayed feed)</div>
+          <div class="value num">571,272*</div>
+          <div class="sub">*Unchanged from the 8:35am PT check &mdash; Yahoo's own page flags "delayed" data and Finnhub's candle/volume-history endpoint is still restricted on this API tier, so this figure is stale, not a fresh live read. Baseline for comparison remains 8/21 close: 1,288,934 vs 793,208 avg (~62% above average).</div>
         </div>
       </div>
-      <div class="as-of" style="margin-top:10px;">Price is up 6.46% on the day per Finnhub. Without a confirmed volume read, can't characterize today's activity as above/below average &mdash; treat the move as directionally real (cross-checked via curl) but unconfirmed on participation.</div>
+      <div class="as-of" style="margin-top:10px;">The price move itself is the notable activity: GORO is up 8.15% on the day on a $3.50&ndash;$3.87 intraday range, a swing consistent with the stock's flagged high volatility rather than a specific news catalyst found today.</div>
     </div>
 
     <div class="card">
       <h2>Analyst Coverage</h2>
-      <p style="margin:0 0 8px; font-size:14px;">No analyst action found newer than 8/22/26 that supersedes the existing split coverage. A search surfaced older (mid-2025, pre-merger) HC Wainwright targets around $1.25&ndash;$1.50 &mdash; stale and not applicable post-merger, excluded.</p>
+      <p style="margin:0 0 8px; font-size:14px;">No analyst action found newer than 8/22/26 that supersedes the existing split coverage. A search surfaced only older (mid-2025, pre-merger) HC Wainwright targets around $1.25&ndash;$1.50 &mdash; stale and excluded. Treat any single target as unreliable.</p>
       <ul class="clean">
         <li><b>CFRA:</b> Sell (8/22/26)</li>
         <li><b>LSEG:</b> Buy, $1.75 target (8/21/26) &mdash; contradicts CFRA</li>
@@ -375,9 +383,8 @@
     <div class="card">
       <h2>News (last 24&ndash;48h)</h2>
       <ul class="clean">
-        <li>No new developments beyond the two already-known August releases: San Francisco restart-study update (8/14) and Don David drill results (8/17). No new insider filings located since the 8/14 Sprott purchase.</li>
-        <li>Permanent CEO search remains open &mdash; no announcement found; Javier Reyes continues as Interim CEO.</li>
-        <li>Company-site check reconfirmed the four-asset list and 135,419,619 / 151,247,574 share count unchanged as of 8/19/26; no new press release or investor presentation dated after the July 2026 deck.</li>
+        <li>No new operational developments since the last check. Most recent items remain the Aug 17 Don David drill results and the Aug 14 San Francisco restart-study update; no new insider filings since the 8/14 Sprott purchase.</li>
+        <li>Company-site re-check reconfirmed cash/debt, official share count, and all four assets unchanged; no new press release or investor presentation posted since the July 2026 deck.</li>
       </ul>
     </div>
   </section>
@@ -388,7 +395,7 @@
       <div class="cat-list">
         <div class="cat-item">
           <div class="cat-date">Aug 28, 2026</div>
-          <div class="cat-body"><b>Estimated earnings date</b><span>Tomorrow (Yahoo Finance estimate) &mdash; watch for actual results vs. the weak-GAAP/positive-FCF split above.</span></div>
+          <div class="cat-body"><b>Estimated earnings date</b><span>Tomorrow (Yahoo Finance estimate). Watch for actual results vs. the weak-GAAP/positive-FCF split above.</span></div>
         </div>
         <div class="cat-item">
           <div class="cat-date">Ongoing</div>
@@ -418,7 +425,7 @@
     <div class="card">
       <h2>Short-Term Trend Estimate</h2>
       <p style="margin:0 0 8px; font-size:14.5px;">
-        GORO is up 6.46% to $3.79 per Finnhub (cross-verified via direct curl), moving back above its 50-day moving average while still below the 200-day, though today's participation can't be confirmed since the volume-history endpoint was unavailable this run. Going into tomorrow's Aug 28 estimated earnings date, the fundamental picture stays genuinely mixed: GAAP results remain weak (&minus;138% net margin, &minus;$54.81M TTM loss, elevated 306.9% accruals) but TTM levered FCF is solidly positive (+$36.91M) against a comfortable $46M cash / zero-debt balance sheet. Eric Sprott's $1.27M open-market purchase at essentially Diego's own cost basis, plus CEO Javier Reyes's ~1.1% stake, are a real insider-conviction counterweight to fragmented, contradictory analyst coverage (CFRA Sell vs. LSEG Buy/$1.75 target). Standing catalysts &mdash; the San Francisco resource and El Llano exploration target feeding a Q4 2026 restart study, ongoing high-grade Don David results, and Back Forty as longer-dated optionality &mdash; remain intact but mostly dated out, while the stock's low/mixed correlation to the broader market means it can move independently of macro sentiment in either direction; a supportive gold macro backdrop (major desks clustering $4,000&ndash;$4,900/oz by year-end) is a credible tailwind if it plays out.
+        GORO is up 8.15% intraday to $3.85, and the combined position has flipped from a slight loss to essentially breakeven since the prior check less than 20 minutes ago &mdash; itself a good illustration of the stock's flagged high-beta chop rather than a fundamental repricing, since no specific news explains today's move. The Aug 28 estimated earnings date is now one trading session away and is the nearest hard catalyst. The underlying fundamental picture stays mixed: GAAP results are weak (&minus;138% net margin, &minus;$54.81M TTM loss, elevated 306.9% accruals) but TTM levered FCF is solidly positive (+$36.91M) against a comfortable $46M cash / zero-debt balance sheet. Eric Sprott's $1.27M open-market purchase at essentially Diego's own cost basis, plus CEO Javier Reyes's ~1.1% stake, remain a real insider-conviction counterweight to fragmented, contradictory analyst coverage (CFRA Sell vs. LSEG Buy/$1.75 target). Standing catalysts &mdash; the San Francisco resource and El Llano exploration target feeding a Q4 2026 restart study, ongoing high-grade Don David results, and Back Forty as longer-dated optionality &mdash; remain intact but mostly dated out, while the stock's low/mixed correlation to the broader market means it can move independently of macro sentiment in either direction; a supportive gold macro backdrop (major desks clustering $4,000&ndash;$4,900/oz by year-end) is a credible tailwind if it plays out.
       </p>
       <div class="disclaimer">
         This is informational only and not financial advice. It is not a recommendation to buy, sell, or hold GORO.
@@ -427,7 +434,7 @@
   </section>
 
   <footer class="note">
-    Verify exact price and account values against the Merrill Lynch and Charles Schwab apps directly &mdash; intraday price was still moving as of this check (8:33am PT / 11:33am ET) and may differ by the time you read this.
+    Verify exact price and account values against the Merrill Lynch and Charles Schwab apps directly &mdash; intraday price was still moving as of this check (8:53am PT / 11:53am ET) and may differ by the time you read this. Earnings are estimated for tomorrow, Aug 28.
   </footer>
 
 </div>
