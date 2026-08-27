@@ -158,7 +158,7 @@
 
   ul.clean { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; }
   ul.clean li { padding-left: 16px; position: relative; }
-  ul.clean li::before { content: "–"; position: absolute; left: 0; color: var(--muted); }
+  ul.clean li::before { content: "\2013"; position: absolute; left: 0; color: var(--muted); }
 
   .mismatch-box {
     margin-top: 12px; padding: 12px 14px; background: var(--warn-soft); border-radius: 10px;
@@ -189,21 +189,21 @@
     <div>
       <div class="ticker-block">
         <span class="ticker mono">GORO</span>
-        <span class="company-name">Goldgroup Mining Inc. · NYSE American</span>
+        <span class="company-name">Goldgroup Mining Inc. &middot; NYSE American</span>
       </div>
-      <div class="as-of">Intraday check &middot; Wed, Aug 26 2026 &middot; 12:32pm PT / 3:32pm ET</div>
+      <div class="as-of">Intraday check &middot; Thu, Aug 27 2026 &middot; 8:35am PT / 11:35am ET</div>
     </div>
     <div class="price-block">
-      <div class="price num">$3.55</div>
-      <div class="change down num">&minus;$0.32 (&minus;8.27%) vs prior close $3.87</div>
+      <div class="price num">$3.79</div>
+      <div class="change up num">+$0.23 (+6.46%) vs prior close $3.56</div>
     </div>
   </header>
 
   <div class="badges">
-    <span class="badge">Price/volume source: <b>Finnhub</b> (live quote, WebFetch)</span>
-    <span class="badge">Cross-check: <b>Yahoo Finance</b> consistent ($3.54, same direction/magnitude)</span>
-    <span class="badge warn">TradingView cross-check: price $3.57 consistent, but its shown +9.63% change conflicts with Finnhub/Yahoo &mdash; direction/magnitude taken from Finnhub/Yahoo</span>
-    <span class="badge">Company-site check: goldgroupmining.com reachable, figures below current as of 8/26</span>
+    <span class="badge">Price source: <b>Finnhub</b> (live quote, WebFetch)</span>
+    <span class="badge">Cross-check: <b>Yahoo Finance</b> consistent ($3.755, +5.48%, same direction as Finnhub)</span>
+    <span class="badge warn">TradingView cross-check: $3.72 close in price but its shown &minus;8.01% change conflicts with Finnhub/Yahoo (likely a stale/cached read) &mdash; direction/magnitude taken from Finnhub/Yahoo</span>
+    <span class="badge">Company-site check: goldgroupmining.com reachable &mdash; cash, share count &amp; all four assets unchanged as of 8/27</span>
   </div>
 
   <section>
@@ -220,61 +220,61 @@
               <td class="num">10,857</td>
               <td class="num">$3.8512</td>
               <td class="num">$41,812.48</td>
-              <td class="num">$38,542.35</td>
-              <td class="num loss">&minus;$3,270.13</td>
-              <td class="num loss">&minus;7.82%</td>
+              <td class="num">$41,148.03</td>
+              <td class="num loss">&minus;$664.45</td>
+              <td class="num loss">&minus;1.59%</td>
             </tr>
             <tr>
               <td class="acct">Charles Schwab</td>
               <td class="num">897</td>
               <td class="num">$3.80</td>
               <td class="num">$3,408.60</td>
-              <td class="num">$3,184.35</td>
-              <td class="num loss">&minus;$224.25</td>
-              <td class="num loss">&minus;6.58%</td>
+              <td class="num">$3,399.63</td>
+              <td class="num loss">&minus;$8.97</td>
+              <td class="num loss">&minus;0.26%</td>
             </tr>
             <tr class="total">
               <td class="acct">Combined</td>
               <td class="num">11,754</td>
               <td class="num">$3.85</td>
               <td class="num">$45,221.08</td>
-              <td class="num">$41,726.70</td>
-              <td class="num loss">&minus;$3,494.38</td>
-              <td class="num loss">&minus;7.73%</td>
+              <td class="num">$44,547.66</td>
+              <td class="num loss">&minus;$673.42</td>
+              <td class="num loss">&minus;1.49%</td>
             </tr>
           </tbody>
         </table>
-        <div class="as-of" style="margin-top:10px;">Blended cost basis: $3.85/share. Verify exact figures against your brokerage app &mdash; intraday price still moving into the close.</div>
+        <div class="as-of" style="margin-top:10px;">Blended cost basis: $3.85/share. Verify exact figures against your brokerage app &mdash; intraday price still moving.</div>
       </div>
       <div class="chart-wrap">
-        <svg viewBox="0 0 930 330" role="img" aria-label="Bar chart comparing cost basis to current value for Merrill Lynch, Charles Schwab, and Combined accounts, each showing an unrealized loss">
+        <svg viewBox="0 0 930 330" role="img" aria-label="Bar chart comparing cost basis to current value for Merrill Lynch, Charles Schwab, and Combined accounts, each showing a small unrealized loss">
           <text x="165" y="40" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--ink)" font-family="IBM Plex Sans, sans-serif">Merrill Lynch</text>
           <text x="465" y="40" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--ink)" font-family="IBM Plex Sans, sans-serif">Charles Schwab</text>
           <text x="765" y="40" text-anchor="middle" font-size="14" font-weight="700" style="fill:var(--ink)" font-family="IBM Plex Sans, sans-serif">Combined</text>
 
-          <text x="165" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;7.82%</text>
-          <text x="465" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;6.58%</text>
-          <text x="765" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;7.73%</text>
+          <text x="165" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;1.59%</text>
+          <text x="465" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;0.26%</text>
+          <text x="765" y="68" text-anchor="middle" font-size="20" font-weight="700" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">&minus;1.49%</text>
 
           <line x1="40" y1="260" x2="890" y2="260" stroke="var(--border-strong)" stroke-width="1"/>
 
           <!-- Merrill Lynch -->
           <rect x="84" y="132" width="68" height="128" rx="4" style="fill:var(--neutral-bar)"/>
-          <rect x="178" y="142" width="68" height="118" rx="4" style="fill:var(--critical)"/>
+          <rect x="178" y="134.0" width="68" height="126.0" rx="4" style="fill:var(--critical)"/>
           <text x="118" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--ink-2)" font-family="IBM Plex Mono, monospace">$41,812</text>
-          <text x="212" y="130" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$38,542</text>
+          <text x="212" y="118" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$41,148</text>
 
           <!-- Charles Schwab -->
           <rect x="384" y="132" width="68" height="128" rx="4" style="fill:var(--neutral-bar)"/>
-          <rect x="478" y="140.4" width="68" height="119.6" rx="4" style="fill:var(--critical)"/>
+          <rect x="478" y="132.3" width="68" height="127.7" rx="4" style="fill:var(--critical)"/>
           <text x="418" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--ink-2)" font-family="IBM Plex Mono, monospace">$3,409</text>
-          <text x="512" y="128.4" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$3,184</text>
+          <text x="512" y="118" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$3,400</text>
 
           <!-- Combined -->
           <rect x="684" y="132" width="68" height="128" rx="4" style="fill:var(--neutral-bar)"/>
-          <rect x="778" y="141.9" width="68" height="118.1" rx="4" style="fill:var(--critical)"/>
+          <rect x="778" y="133.9" width="68" height="126.1" rx="4" style="fill:var(--critical)"/>
           <text x="718" y="120" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--ink-2)" font-family="IBM Plex Mono, monospace">$45,221</text>
-          <text x="812" y="129.9" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$41,727</text>
+          <text x="812" y="118" text-anchor="middle" font-size="13" font-weight="600" style="fill:var(--critical)" font-family="IBM Plex Mono, monospace">$44,548</text>
 
           <text x="165" y="280" text-anchor="middle" font-size="12" style="fill:var(--muted)" font-family="IBM Plex Sans, sans-serif">10,857 sh</text>
           <text x="465" y="280" text-anchor="middle" font-size="12" style="fill:var(--muted)" font-family="IBM Plex Sans, sans-serif">897 sh</text>
@@ -324,13 +324,13 @@
         </div>
         <div class="stat">
           <div class="label">Moving Averages</div>
-          <div class="value num">At 50d / Below 200d</div>
-          <div class="sub">50d $3.54, 200d $4.12 vs live $3.55</div>
+          <div class="value num">Above 50d / Below 200d</div>
+          <div class="sub">50d $3.54, 200d $4.12 vs live $3.79</div>
         </div>
         <div class="stat">
           <div class="label">Market Cap (computed)</div>
-          <div class="value num">$480.7M</div>
-          <div class="sub">135.42M basic shares &times; $3.55 live ($536.9M fully diluted). TradingView independently shows $477.2M &mdash; close agreement. Aggregators (Yahoo ~$240M, LSEG ~$369M) appear to use smaller/stale share counts.</div>
+          <div class="value num">$513.2M</div>
+          <div class="sub">135.42M basic shares &times; $3.79 live ($573.2M fully diluted). TradingView independently shows $519.83M &mdash; close agreement. Aggregators (Yahoo ~$506.5M today, LSEG ~$369M, Schwab ~$430M) vary &mdash; some appear to use smaller/stale share counts.</div>
         </div>
       </div>
     </div>
@@ -358,17 +358,17 @@
       <h2>Volume &amp; Unusual Activity</h2>
       <div class="stat-grid">
         <div class="stat" style="border-top:none; padding-top:0;">
-          <div class="label">Today's Volume (intraday)</div>
-          <div class="value num">1,860,259</div>
-          <div class="sub">vs ~793,208 avg baseline (8/21) &mdash; ~134% above average, still accumulating into the close</div>
+          <div class="label">Today's Volume (intraday, ~2hrs in)</div>
+          <div class="value num">571,272</div>
+          <div class="sub">vs 888,761 avg (Yahoo, more current than the 793,208 baseline) &mdash; on pace to run above average by the close; Finnhub's candle/volume-history endpoint returned an API-plan restriction this run, so today's figure comes from Yahoo</div>
         </div>
       </div>
-      <div class="as-of" style="margin-top:10px;">On a down day: price fell 8.27% on well above-average volume, following a sharp run from $3.00 (8/20) to $3.87 (8/25, +29% in 4 sessions). No specific negative news found &mdash; reads as profit-taking/volatility after the rally, consistent with Gold Newsletter's Brien Lundin flagging mechanical index-reconstitution selling as part of the broader post-merger volatility.</div>
+      <div class="as-of" style="margin-top:10px;">Price is up 6.46% on the day, rebounding from yesterday's close of $3.56 (itself down sharply from the $3.87 high on 8/25) &mdash; consistent with the elevated volatility flagged in prior runs rather than a specific news catalyst found today.</div>
     </div>
 
     <div class="card">
       <h2>Analyst Coverage</h2>
-      <p style="margin:0 0 8px; font-size:14px;">No analyst action found newer than 8/22/26 that supersedes the existing split coverage. Treat any single target as unreliable.</p>
+      <p style="margin:0 0 8px; font-size:14px;">No analyst action found newer than 8/22/26 that supersedes the existing split coverage. A search surfaced older (mid-2025, pre-merger) HC Wainwright targets around $1.25&ndash;$1.50 &mdash; stale and not applicable post-merger, excluded. Treat any single target as unreliable.</p>
       <ul class="clean">
         <li><b>CFRA:</b> Sell (8/22/26)</li>
         <li><b>LSEG:</b> Buy, $1.75 target (8/21/26) &mdash; contradicts CFRA</li>
@@ -381,8 +381,8 @@
     <div class="card">
       <h2>News (last 24&ndash;48h)</h2>
       <ul class="clean">
-        <li>No new developments found beyond the two already-known August releases: San Francisco restart-study update (8/14) and Don David drill results (8/17). No new insider filings located since the 8/14 Sprott purchase.</li>
-        <li>Company-site check (goldgroupmining.com) reconfirmed cash/debt, share count, and all four assets unchanged from the last run; one new detail surfaced &mdash; the site notes ~$72M projected cash post warrant exercise, on top of the current $46M/zero-debt position.</li>
+        <li>No new operational developments in the last 24&ndash;48h beyond the already-known August releases: San Francisco restart-study update (8/14) and Don David drill results (8/17). No new insider filings located since the 8/14 Sprott purchase.</li>
+        <li>Company-site check (goldgroupmining.com) reconfirmed cash/debt, share count, and all four assets unchanged. One new detail surfaced: Goldgroup entered a Consulting Services Agreement effective 8/11/26 with Milestone Capital Partners to support its digital investor-communications strategy &mdash; an IR/admin item, not operationally material.</li>
       </ul>
     </div>
   </section>
@@ -393,7 +393,7 @@
       <div class="cat-list">
         <div class="cat-item">
           <div class="cat-date">Aug 28, 2026</div>
-          <div class="cat-body"><b>Estimated earnings date</b><span>2 days out (Yahoo Finance estimate) &mdash; watch for actual results vs. the weak-GAAP/positive-FCF split above.</span></div>
+          <div class="cat-body"><b>Estimated earnings date</b><span>Tomorrow &mdash; ~8pm UTC / 1pm PT / 4pm ET (Yahoo Finance estimate). Watch for actual results vs. the weak-GAAP/positive-FCF split above.</span></div>
         </div>
         <div class="cat-item">
           <div class="cat-date">Ongoing</div>
@@ -423,7 +423,7 @@
     <div class="card">
       <h2>Short-Term Trend Estimate</h2>
       <p style="margin:0 0 8px; font-size:14.5px;">
-        GORO fell 8.27% intraday to $3.55 on volume already ~134% above its recent average with the session not yet closed, following a sharp run from $3.00 to $3.87 over the prior four sessions &mdash; this reads more like profit-taking/volatility than a reaction to new negative news. Going into the Aug 28 estimated earnings date, the fundamental picture is genuinely mixed: GAAP results remain weak (&minus;138% net margin, &minus;$54.81M TTM loss, elevated 306.9% accruals) but TTM levered FCF is solidly positive (+$36.91M) against a comfortable $46M cash / zero-debt balance sheet. Eric Sprott's $1.27M open-market purchase at essentially Diego's own cost basis, plus CEO Javier Reyes's ~1.1% stake, are a real insider-conviction counterweight to fragmented, contradictory analyst coverage (CFRA Sell vs. LSEG Buy/$1.75 target). Standing catalysts &mdash; the San Francisco resource and El Llano exploration target feeding a Q4 2026 restart study, ongoing high-grade Don David results, and Back Forty as longer-dated optionality &mdash; remain intact but mostly dated out, while the stock's low/mixed correlation to the broader market means it can move independently of macro sentiment in either direction; a supportive gold macro backdrop (major desks clustering $4,000&ndash;$4,900/oz by year-end) is a credible tailwind if it plays out.
+        GORO is up 6.46% intraday to $3.79, recovering part of yesterday's 8.27% drop, with volume tracking toward another above-average session &mdash; no specific news explains today's move, so this reads as continued high-beta chop rather than a fundamental repricing. The Aug 28 estimated earnings date is now one trading session away and is the nearest hard catalyst. The underlying fundamental picture stays mixed: GAAP results are weak (&minus;138% net margin, &minus;$54.81M TTM loss, elevated 306.9% accruals) but TTM levered FCF is solidly positive (+$36.91M) against a comfortable $46M cash / zero-debt balance sheet. Eric Sprott's $1.27M open-market purchase at essentially Diego's own cost basis, plus CEO Javier Reyes's ~1.1% stake, remain a real insider-conviction counterweight to fragmented, contradictory analyst coverage (CFRA Sell vs. LSEG Buy/$1.75 target). Standing catalysts &mdash; the San Francisco resource and El Llano exploration target feeding a Q4 2026 restart study, ongoing high-grade Don David results, and Back Forty as longer-dated optionality &mdash; remain intact but mostly dated out, while the stock's low/mixed correlation to the broader market means it can move independently of macro sentiment in either direction; a supportive gold macro backdrop (major desks clustering $4,000&ndash;$4,900/oz by year-end) is a credible tailwind if it plays out.
       </p>
       <div class="disclaimer">
         This is informational only and not financial advice. It is not a recommendation to buy, sell, or hold GORO.
@@ -432,7 +432,7 @@
   </section>
 
   <footer class="note">
-    Verify exact price and account values against the Merrill Lynch and Charles Schwab apps directly &mdash; intraday price was still moving as of this check (12:32pm PT / 3:32pm ET) and may differ by the time you read this.
+    Verify exact price and account values against the Merrill Lynch and Charles Schwab apps directly &mdash; intraday price was still moving as of this check (8:35am PT / 11:35am ET) and may differ by the time you read this. Earnings are estimated for tomorrow, Aug 28.
   </footer>
 
 </div>
