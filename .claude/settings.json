@@ -9,7 +9,15 @@
       "Bash(git diff:*)",
       "Bash(git clone:*)",
       "Bash(git fetch:*)",
-      "Bash(git pull:*)"
-    ]
+      "Bash(git pull:*)",
+      "WebSearch",
+      "WebFetch",
+      "mcp__ZipRecruiter__search_jobs",
+      "mcp__Indeed__search_jobs",
+      "Artifact",
+      "SendUserFile",
+      "PushNotification"
+    ],
+    "defaultMode": "bypassPermissions"
   }
 }
