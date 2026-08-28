@@ -293,21 +293,21 @@
         <span class="sub">NYSE American: GORO · TSXV: GGA · FSE: 55G0</span>
       </div>
       <div class="timestamp">
-        <div class="date">Thursday, August 27, 2026</div>
-        <div>Market close · 4:00 PM ET / 1:00 PM PT</div>
+        <div class="date">Friday, August 28, 2026</div>
+        <div>Intraday check · 1:46 PM ET / 10:46 AM PT</div>
       </div>
     </div>
 
     <div class="ticker-row">
-      <span class="ticker-price tabular">$3.79</span>
-      <span class="ticker-change up tabular">▲ +$0.23 &nbsp;(+6.46%)</span>
-      <span class="ticker-note tabular">Prior close $3.56 · Range $3.50&ndash;$3.87</span>
+      <span class="ticker-price tabular">$3.52</span>
+      <span class="ticker-change down tabular">▼ &minus;$0.27 &nbsp;(&minus;7.12%)</span>
+      <span class="ticker-note tabular">Prior close $3.79 · Range $3.48&ndash;$3.83 (intraday, session in progress)</span>
     </div>
 
     <div class="badge-row">
-      <span class="badge"><span class="dot"></span>Price/volume: Finnhub (live, verified via direct API call)</span>
-      <span class="badge"><span class="dot"></span>Yahoo Finance cross-check: consistent ($3.789, +6.43%)</span>
-      <span class="badge"><span class="dot"></span>TradingView cross-check: price consistent ($3.79); technical rating Buy (1wk) / Buy (1mo)</span>
+      <span class="badge"><span class="dot"></span>Price: Finnhub (live, 1:46 PM ET)</span>
+      <span class="badge"><span class="dot"></span>Yahoo Finance cross-check: consistent direction ($3.495, &minus;7.78%)</span>
+      <span class="badge"><span class="dot warn"></span>TradingView cross-check: shows +6.46% / $3.54 &mdash; conflicts with Finnhub/Yahoo direction, likely a stale/cached read; direction taken from Finnhub+Yahoo</span>
       <span class="badge"><span class="dot warn"></span>goldgroupmining.com checked: no change vs. last-confirmed cash/share-count baseline</span>
     </div>
   </header>
@@ -317,7 +317,7 @@
     <div class="section-head">
       <span class="eyebrow">Portfolio</span>
       <h2>Value &amp; unrealized gain/loss</h2>
-      <span class="desc">11,754 shares combined across two brokerages, marked at today's close of $3.79.</span>
+      <span class="desc">11,754 shares combined across two brokerages, marked at the current intraday price of $3.52.</span>
     </div>
 
     <div class="card overflow-x">
@@ -328,7 +328,7 @@
             <th>Shares</th>
             <th>Cost / sh</th>
             <th>Cost basis</th>
-            <th>Value today</th>
+            <th>Value now</th>
             <th>Gain / loss</th>
           </tr>
         </thead>
@@ -338,24 +338,24 @@
             <td>10,857</td>
             <td>$3.8512</td>
             <td>$41,812</td>
-            <td>$41,148</td>
-            <td class="gl-neg">&minus;$664 (&minus;1.59%)</td>
+            <td>$38,217</td>
+            <td class="gl-neg">&minus;$3,596 (&minus;8.60%)</td>
           </tr>
           <tr>
             <td>Charles Schwab</td>
             <td>897</td>
             <td>$3.80</td>
             <td>$3,409</td>
-            <td>$3,400</td>
-            <td class="gl-neg">&minus;$9 (&minus;0.26%)</td>
+            <td>$3,157</td>
+            <td class="gl-neg">&minus;$251 (&minus;7.37%)</td>
           </tr>
           <tr>
             <td>Combined<span class="acct-sub">Blended cost $3.8473/sh</span></td>
             <td>11,754</td>
             <td>$3.8473</td>
             <td>$45,221</td>
-            <td>$44,548</td>
-            <td class="gl-neg">&minus;$673 (&minus;1.49%)</td>
+            <td>$41,374</td>
+            <td class="gl-neg">&minus;$3,847 (&minus;8.51%)</td>
           </tr>
         </tbody>
       </table>
@@ -364,48 +364,48 @@
     <div class="card">
       <svg viewBox="0 0 800 360" width="100%" role="img" aria-labelledby="chartTitle chartDesc" style="overflow: visible; font-family: 'Public Sans', sans-serif;">
         <title id="chartTitle">Current value vs. cost basis by account</title>
-        <desc id="chartDesc">Merrill Lynch down 1.59%, Charles Schwab down 0.26%, Combined down 1.49%, all versus cost basis, at a $3.79 share price.</desc>
+        <desc id="chartDesc">Merrill Lynch down 8.60%, Charles Schwab down 7.37%, Combined down 8.51%, all versus cost basis, at a $3.52 intraday share price.</desc>
 
         <!-- Panel 1: Merrill Lynch  x-center 140 -->
         <g class="panel">
-          <text x="140" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;1.59%</text>
+          <text x="140" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;8.60%</text>
           <line x1="60" y1="260" x2="220" y2="260" stroke="var(--border-strong)" stroke-width="1"/>
-          <!-- cost basis dashed reference line: 41812.48/56000*160=119.46 -> y=260-119.46=140.54 -->
-          <line x1="70" y1="140.5" x2="210" y2="140.5" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <text x="212" y="133" text-anchor="end" font-size="10.5" fill="var(--text-muted)" font-family="IBM Plex Mono, monospace">cost $41,812</text>
-          <!-- value bar: 41148.03/56000*160=117.57 -> y=260-117.57=142.43 -->
-          <rect x="110" y="142.4" width="60" height="117.6" rx="4" fill="var(--critical)"/>
+          <!-- cost basis dashed reference line: 41812.48/48000*160=139.37 -> y=260-139.37=120.63 -->
+          <line x1="70" y1="120.6" x2="210" y2="120.6" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="212" y="113" text-anchor="end" font-size="10.5" fill="var(--text-muted)" font-family="IBM Plex Mono, monospace">cost $41,812</text>
+          <!-- value bar: 38216.64/48000*160=127.39 -> y=260-127.39=132.61 -->
+          <rect x="110" y="132.6" width="60" height="127.4" rx="4" fill="var(--critical)"/>
           <text x="140" y="280" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--text-primary)">Merrill Lynch</text>
-          <text x="140" y="298" text-anchor="middle" font-size="11.5" fill="var(--text-secondary)" font-family="IBM Plex Mono, monospace">$41,148 value</text>
-          <text x="140" y="314" text-anchor="middle" font-size="11" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;$664</text>
+          <text x="140" y="298" text-anchor="middle" font-size="11.5" fill="var(--text-secondary)" font-family="IBM Plex Mono, monospace">$38,217 value</text>
+          <text x="140" y="314" text-anchor="middle" font-size="11" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;$3,596</text>
         </g>
 
         <!-- Panel 2: Charles Schwab  x-center 400 -->
         <g class="panel">
-          <text x="400" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;0.26%</text>
+          <text x="400" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;7.37%</text>
           <line x1="320" y1="260" x2="480" y2="260" stroke="var(--border-strong)" stroke-width="1"/>
-          <!-- cost 3408.6/4600*160=118.56 -> y=141.44 -->
-          <line x1="330" y1="141.4" x2="470" y2="141.4" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <text x="472" y="134" text-anchor="end" font-size="10.5" fill="var(--text-muted)" font-family="IBM Plex Mono, monospace">cost $3,409</text>
-          <!-- value 3399.63/4600*160=118.25 -> y=141.75 -->
-          <rect x="370" y="141.8" width="60" height="118.2" rx="4" fill="var(--critical)"/>
+          <!-- cost 3408.6/3920*160=139.12 -> y=120.88 -->
+          <line x1="330" y1="120.9" x2="470" y2="120.9" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="472" y="113" text-anchor="end" font-size="10.5" fill="var(--text-muted)" font-family="IBM Plex Mono, monospace">cost $3,409</text>
+          <!-- value 3157.44/3920*160=128.88 -> y=131.12 -->
+          <rect x="370" y="131.1" width="60" height="128.9" rx="4" fill="var(--critical)"/>
           <text x="400" y="280" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--text-primary)">Charles Schwab</text>
-          <text x="400" y="298" text-anchor="middle" font-size="11.5" fill="var(--text-secondary)" font-family="IBM Plex Mono, monospace">$3,400 value</text>
-          <text x="400" y="314" text-anchor="middle" font-size="11" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;$9</text>
+          <text x="400" y="298" text-anchor="middle" font-size="11.5" fill="var(--text-secondary)" font-family="IBM Plex Mono, monospace">$3,157 value</text>
+          <text x="400" y="314" text-anchor="middle" font-size="11" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;$251</text>
         </g>
 
         <!-- Panel 3: Combined  x-center 660 -->
         <g class="panel">
-          <text x="660" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;1.49%</text>
+          <text x="660" y="34" text-anchor="middle" font-size="16" font-weight="700" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;8.51%</text>
           <line x1="580" y1="260" x2="740" y2="260" stroke="var(--border-strong)" stroke-width="1"/>
-          <!-- cost 45221.08/61000*160=118.62 -> y=141.38 -->
-          <line x1="590" y1="141.4" x2="730" y2="141.4" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
-          <text x="732" y="134" text-anchor="end" font-size="10.5" fill="var(--text-muted)" font-family="IBM Plex Mono, monospace">cost $45,221</text>
-          <!-- value 44547.66/61000*160=116.85 -> y=143.15 -->
-          <rect x="630" y="143.2" width="60" height="116.8" rx="4" fill="var(--critical)"/>
+          <!-- cost 45221.08/52000*160=139.14 -> y=120.86 -->
+          <line x1="590" y1="120.9" x2="730" y2="120.9" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="4 3"/>
+          <text x="732" y="113" text-anchor="end" font-size="10.5" fill="var(--text-muted)" font-family="IBM Plex Mono, monospace">cost $45,221</text>
+          <!-- value 41374.08/52000*160=127.31 -> y=132.69 -->
+          <rect x="630" y="132.7" width="60" height="127.3" rx="4" fill="var(--critical)"/>
           <text x="660" y="280" text-anchor="middle" font-size="12.5" font-weight="700" fill="var(--text-primary)">Combined</text>
-          <text x="660" y="298" text-anchor="middle" font-size="11.5" fill="var(--text-secondary)" font-family="IBM Plex Mono, monospace">$44,548 value</text>
-          <text x="660" y="314" text-anchor="middle" font-size="11" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;$673</text>
+          <text x="660" y="298" text-anchor="middle" font-size="11.5" fill="var(--text-secondary)" font-family="IBM Plex Mono, monospace">$41,374 value</text>
+          <text x="660" y="314" text-anchor="middle" font-size="11" fill="var(--critical)" font-family="IBM Plex Mono, monospace">&minus;$3,847</text>
         </g>
       </svg>
       <div style="display:flex; gap:20px; justify-content:center; margin-top:6px; font-size:12px; color:var(--text-secondary); font-family:'IBM Plex Mono',monospace;">
@@ -422,7 +422,7 @@
       <h2>Last 24&ndash;48 hours</h2>
     </div>
     <div class="card">
-      <p class="news-empty">No material new developments in the past 24&ndash;48 hours. The most recent items remain the Aug 17 Don David drill results and the Aug 14 San Francisco restart update, both already reflected in prior checks. Watching for the Aug 28 earnings release next.</p>
+      <p class="news-empty">No new operational developments in the past 24&ndash;48 hours. The most recent items remain the Aug 17 Don David drill results and the Aug 14 San Francisco restart update. Today's intraday move appears to be pre-earnings positioning rather than news-driven &mdash; earnings are scheduled for release later today (8:00 PM UTC / 4:00 PM ET), after this check.</p>
     </div>
   </section>
 
@@ -433,7 +433,7 @@
       <h2>Trend estimate</h2>
     </div>
     <div class="card trend-card">
-      <p>GORO closed the session up 6.46% at $3.79 on volume of roughly 1.30M shares — meaningfully above both the pre-merger baseline average (~793K) and the more current trailing average (~889K), so today's move came with real participation rather than thin-tape noise. That strength sits directly ahead of the Aug 28 earnings print, which should be the next real catalyst and a likely source of added volatility either way. Fundamentals stay mixed but not alarming: a wide GAAP loss and a weak 0.5 current ratio are offset by positive TTM levered free cash flow (+$36.9M) and a $46M, zero-debt cash position, while elevated accruals (306.9%) argue for reading reported earnings with some skepticism. Analyst coverage remains too fragmented to lean on (a lone Sell and a lone Buy/$1.75 target, no real consensus), and the stock's low, sign-inconsistent correlation to the broader market cuts both ways — it won't reliably track a market rally, but it also won't reliably track a selloff. The more concrete counterweight is insider behavior: Eric Sprott's open-market purchase near Diego's own cost basis and Interim CEO Javier Reyes's 1.1% stake both read as real skin-in-the-game, set against standing optionality at San Francisco/El Llano, Don David's ongoing drill success, and Back Forty's longer-dated feasibility path — all against a gold macro backdrop where mainstream desks cluster $4,000&ndash;$4,900/oz by year-end.</p>
+      <p>GORO is down 7.12% intraday to $3.52 (Yahoo shows a consistent &minus;7.78% to $3.495), a sharp reversal from yesterday's +6.46% close, with earnings still hours away (8:00 PM UTC / 4:00 PM ET today) — so this move is pre-earnings positioning and continued high-beta chop, not a reaction to results or new operational news. Volume so far (~1.25M, partial session) is already running above the current trailing average (~909K) and well above the pre-merger baseline (~793K), consistent with the elevated, mechanically volatile trading pattern flagged around the merger close. Fundamentals stay mixed but not alarming: a wide GAAP loss and a weak 0.5 current ratio are offset by positive TTM levered free cash flow (+$36.9M) and a $46M, zero-debt cash position, while elevated accruals (306.9%) argue for reading tonight's numbers with some skepticism. Analyst coverage remains too fragmented to lean on (a lone Sell and a lone Buy/$1.75 target, no real consensus), and the stock's low, sign-inconsistent correlation to the broader market means today's drop is plausibly idiosyncratic rather than macro-driven. The more concrete counterweight remains insider behavior — Eric Sprott's open-market purchase near Diego's own cost basis and Interim CEO Javier Reyes's 1.1% stake — set against standing optionality at San Francisco/El Llano, Don David's ongoing drill success, and Back Forty's longer-dated feasibility path, all against a gold macro backdrop where mainstream desks cluster $4,000&ndash;$4,900/oz by year-end.</p>
       <div class="disclaimer">Informational only — not financial advice. No buy, sell, or hold recommendation is being made.</div>
     </div>
   </section>
@@ -448,8 +448,8 @@
       <div class="stat-grid tabular">
         <div class="stat">
           <span class="label">Market cap (official count × live price)</span>
-          <span class="value">$513.2M</span>
-          <span class="foot">135,419,619 basic sh. × $3.79 · cf. Yahoo $511.1M, TradingView $519.8M</span>
+          <span class="value">$476.7M</span>
+          <span class="foot">135,419,619 basic sh. × $3.52 · cf. Yahoo $471.5M, TradingView $467.1M (TradingView's price read is stale this run)</span>
         </div>
         <div class="stat">
           <span class="label">Cash / debt</span>
@@ -489,7 +489,7 @@
         <div class="stat">
           <span class="label">Moving averages (last-confirmed 8/20)</span>
           <span class="value">50d $3.54 · 200d $4.12</span>
-          <span class="foot">Not refreshed live this run — $3.79 sat above the 50d, below the 200d as of that reading</span>
+          <span class="foot">Not refreshed live this run — today's $3.52 sits just below the 50d and well below the 200d</span>
         </div>
       </div>
     </div>
@@ -529,12 +529,12 @@
     </div>
     <div class="card callout">
       <div class="callout-row">
-        <div class="l"><strong>Today's volume vs. pre-merger baseline (793,208, set 8/21/26)</strong></div>
-        <div class="r tabular">1,297,417 · +63.5%</div>
+        <div class="l"><strong>Volume so far vs. pre-merger baseline (793,208, set 8/21/26)</strong>Partial session — market has not closed yet.</div>
+        <div class="r tabular">1,251,191 · +57.7%</div>
       </div>
       <div class="callout-row">
-        <div class="l"><strong>Today's volume vs. current trailing average (888,761, Yahoo)</strong>The trailing average itself has climbed well above the pre-merger baseline amid elevated post-merger trading.</div>
-        <div class="r tabular">1,297,417 · +46.0%</div>
+        <div class="l"><strong>Volume so far vs. current trailing average (908,511, Yahoo)</strong>The trailing average itself has climbed well above the pre-merger baseline amid elevated post-merger trading.</div>
+        <div class="r tabular">1,251,191 · +37.7%</div>
       </div>
     </div>
   </section>
@@ -573,8 +573,8 @@
     </div>
     <div class="card catalyst-list">
       <div class="catalyst-item">
-        <div class="when">Aug 28, 2026</div>
-        <div class="what"><strong>Earnings (estimated, Yahoo)</strong><p>Tomorrow. First full print since the merger close — watch for how GAAP loss, FCF, and cash position are framed.</p></div>
+        <div class="when">Today, 8PM UTC</div>
+        <div class="what"><strong>Earnings release (confirmed, 4:00 PM ET)</strong><p>Not yet reported as of this check (1:46 PM ET). First full print since the merger close — watch for how GAAP loss, FCF, and cash position are framed.</p></div>
       </div>
       <div class="catalyst-item">
         <div class="when">Ongoing</div>
