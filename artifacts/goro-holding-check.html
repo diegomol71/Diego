@@ -33,7 +33,6 @@
       --border-soft: #332c1f;
       --ink: #f2ede1;
       --ink-2: #c9bfa9;
-      --ink-3: #93897027;
       --ink-3: #948a70;
       --accent: #dda94c;
       --accent-ink: #f0c47a;
@@ -267,7 +266,7 @@
 
   .volume-row { display: flex; align-items: center; gap: 26px; flex-wrap: wrap; }
   .volume-bar-track { flex: 1; min-width: 200px; height: 10px; background: var(--surface-alt); border-radius: 6px; overflow: hidden; border: 1px solid var(--border-soft); }
-  .volume-bar-fill { height: 100%; background: var(--accent); border-radius: 6px 0 0 6px; }
+  .volume-bar-fill { height: 100%; background: var(--accent); border-radius: 6px; }
   .volume-stat { font-family: "IBM Plex Mono", monospace; font-size: 13px; color: var(--ink-2); white-space: nowrap; }
   .volume-stat b { color: var(--ink); font-size: 15px; }
 
@@ -314,6 +313,7 @@
   .status-progress { background: var(--accent-soft); color: var(--accent-ink); }
   .status-upcoming { background: color-mix(in srgb, var(--good) 14%, transparent); color: var(--good); }
   .status-long { background: var(--surface-alt); color: var(--ink-3); border: 1px solid var(--border-soft); }
+  .status-watch { background: var(--warning-soft); color: var(--warning); }
   .catalyst-body .title { font-weight: 600; font-size: 14px; margin-bottom: 2px; }
   .catalyst-body .desc { font-size: 13px; color: var(--ink-2); line-height: 1.55; }
 
@@ -333,24 +333,24 @@
         <h1>GORO Holding Check</h1>
         <span class="ticker-chip">GORO · NYSE American</span>
       </div>
-      <div class="asof">Friday, Aug 28, 2026<br>Market close · 4:00 PM ET</div>
+      <div class="asof">Monday, Aug 31, 2026<br>Market close · 4:00 PM ET</div>
     </div>
 
     <div class="price-row">
-      <div class="price-figure">$3.65</div>
-      <div class="price-change down">▼ $0.14 · &minus;3.69%</div>
+      <div class="price-figure">$3.69</div>
+      <div class="price-change up">▲ $0.04 · +1.10%</div>
     </div>
     <div class="price-meta">
-      <span>Prev close <b>$3.79</b></span>
-      <span>Open <b>$3.80</b></span>
-      <span>Day range <b>$3.48 – $3.83</b></span>
-      <span>Volume <b>1,856,875</b></span>
+      <span>Prev close <b>$3.65</b></span>
+      <span>Open <b>$3.65</b></span>
+      <span>Day range <b>$3.59 – $3.76</b></span>
+      <span>Volume <b>798,188</b></span>
     </div>
 
     <div class="badge-row">
       <div class="badge"><span class="dot">●</span> <b>Price &amp; volume:</b> Finnhub quote API (primary, live at close) · Yahoo Finance for volume/avg-volume (Finnhub's candle/volume endpoint isn't available on this API tier)</div>
-      <div class="badge"><span class="dot">●</span> <b>TradingView cross-check:</b> last price $3.65 matches primary source; TradingView's own day-change (+6.46%) conflicts with Finnhub/Yahoo (&minus;3.69%) &mdash; treated as a stale reference calc, not used</div>
-      <div class="badge"><span class="dot">●</span> <b>Company site checked 8/28/26:</b> cash, share count and asset list all unchanged from last confirmation &mdash; no new figures to report</div>
+      <div class="badge"><span class="dot">●</span> <b>TradingView cross-check:</b> last price $3.69 matches primary source exactly · technical rating Neutral (1-week) / Buy (1-month)</div>
+      <div class="badge"><span class="dot">●</span> <b>Company site checked 8/31/26:</b> cash, share count (135,419,619 basic, as of 8/19/26) and the four-asset list all reconfirmed unchanged &mdash; no new figures to report</div>
     </div>
   </header>
 
@@ -358,29 +358,29 @@
   <section class="card">
     <div class="section-head">
       <h2>Portfolio Value &amp; Gain/Loss</h2>
-      <span class="section-note">at $3.65/share</span>
+      <span class="section-note">at $3.69/share</span>
     </div>
 
     <div class="portfolio-summary">
       <div class="stat">
         <div class="label">Merrill Lynch</div>
-        <div class="value loss">$39,628</div>
-        <div class="sub">10,857 sh · cost $3.8512 · &minus;$2,184 (&minus;5.2%)</div>
+        <div class="value loss">$40,062</div>
+        <div class="sub">10,857 sh · cost $3.8512 · &minus;$1,750 (&minus;4.2%)</div>
       </div>
       <div class="stat">
         <div class="label">Charles Schwab</div>
-        <div class="value loss">$3,274</div>
-        <div class="sub">897 sh · cost $3.80 · &minus;$135 (&minus;3.9%)</div>
+        <div class="value loss">$3,310</div>
+        <div class="sub">897 sh · cost $3.80 · &minus;$99 (&minus;2.9%)</div>
       </div>
       <div class="stat combined">
         <div class="label">Combined</div>
-        <div class="value loss">$42,902</div>
-        <div class="sub">11,754 sh · blended cost $3.8473 · &minus;$2,319 (&minus;5.1%)</div>
+        <div class="value loss">$43,372</div>
+        <div class="sub">11,754 sh · blended cost $3.8473 · &minus;$1,849 (&minus;4.1%)</div>
       </div>
     </div>
 
     <div class="chart-wrap">
-      <svg viewBox="0 0 920 460" role="img" aria-label="Bar chart comparing cost basis to current value for Merrill Lynch, Charles Schwab, and Combined holdings, each down 3.9 to 5.2 percent">
+      <svg viewBox="0 0 920 460" role="img" aria-label="Bar chart comparing cost basis to current value for Merrill Lynch, Charles Schwab, and Combined holdings, each down 2.9 to 4.2 percent">
         <line x1="70" y1="390.0" x2="880" y2="390.0" class="gridline" />
         <text x="58" y="394.0" class="axis-label" text-anchor="end">$0</text>
         <line x1="70" y1="326.0" x2="880" y2="326.0" class="gridline" />
@@ -395,27 +395,27 @@
         <text x="58" y="74.0" class="axis-label" text-anchor="end">$50k</text>
 
         <rect x="116.0" y="122.4" width="78" height="267.6" rx="3" class="bar-cost" />
-        <rect x="216.0" y="136.4" width="78" height="253.6" rx="3" class="bar-value bar-loss" />
+        <rect x="216.0" y="133.6" width="78" height="256.4" rx="3" class="bar-value bar-loss" />
         <rect x="386.0" y="368.2" width="78" height="21.8" rx="3" class="bar-cost" />
-        <rect x="486.0" y="369.0" width="78" height="21.0" rx="3" class="bar-value bar-loss" />
+        <rect x="486.0" y="368.8" width="78" height="21.2" rx="3" class="bar-value bar-loss" />
         <rect x="656.0" y="100.6" width="78" height="289.4" rx="3" class="bar-cost" />
-        <rect x="756.0" y="115.4" width="78" height="274.6" rx="3" class="bar-value bar-loss" />
+        <rect x="756.0" y="112.4" width="78" height="277.6" rx="3" class="bar-value bar-loss" />
 
         <text x="155.0" y="112.4" class="bar-dollar" text-anchor="middle">$41,812</text>
-        <text x="255.0" y="126.4" class="bar-dollar" text-anchor="middle">$39,628</text>
-        <text x="205.0" y="88.4" class="bar-pct pct-loss" text-anchor="middle">&minus;5.2%</text>
+        <text x="255.0" y="123.6" class="bar-dollar" text-anchor="middle">$40,062</text>
+        <text x="205.0" y="88.4" class="bar-pct pct-loss" text-anchor="middle">&minus;4.2%</text>
         <text x="205.0" y="416.0" class="cat-label" text-anchor="middle">Merrill Lynch</text>
         <text x="205.0" y="434.0" class="cat-sub" text-anchor="middle">10,857 sh · $3.8512</text>
 
         <text x="425.0" y="358.2" class="bar-dollar" text-anchor="middle">$3,409</text>
-        <text x="525.0" y="359.0" class="bar-dollar" text-anchor="middle">$3,274</text>
-        <text x="475.0" y="334.2" class="bar-pct pct-loss" text-anchor="middle">&minus;3.9%</text>
+        <text x="525.0" y="358.8" class="bar-dollar" text-anchor="middle">$3,310</text>
+        <text x="475.0" y="334.2" class="bar-pct pct-loss" text-anchor="middle">&minus;2.9%</text>
         <text x="475.0" y="416.0" class="cat-label" text-anchor="middle">Charles Schwab</text>
         <text x="475.0" y="434.0" class="cat-sub" text-anchor="middle">897 sh · $3.80</text>
 
         <text x="695.0" y="90.6" class="bar-dollar" text-anchor="middle">$45,221</text>
-        <text x="795.0" y="105.4" class="bar-dollar" text-anchor="middle">$42,902</text>
-        <text x="745.0" y="66.6" class="bar-pct pct-loss" text-anchor="middle">&minus;5.1%</text>
+        <text x="795.0" y="102.4" class="bar-dollar" text-anchor="middle">$43,372</text>
+        <text x="745.0" y="66.6" class="bar-pct pct-loss" text-anchor="middle">&minus;4.1%</text>
         <text x="745.0" y="416.0" class="cat-label" text-anchor="middle">Combined</text>
         <text x="745.0" y="434.0" class="cat-sub" text-anchor="middle">11,754 sh · $3.8473 blended</text>
       </svg>
@@ -429,13 +429,13 @@
   <!-- ============ NEWS ============ -->
   <section class="card">
     <div class="section-head"><h2>News</h2><span class="section-note">last 24&ndash;48h</span></div>
-    <p class="news-empty">No new material developments in the last 24&ndash;48 hours. Most recent items remain the Aug 17 Don David drill results and Aug 14 San Francisco program update, both already reflected in Catalyst Watch below. Today's estimated earnings date has not yet produced a released report as of this 4:00 PM ET close.</p>
+    <p class="news-empty">No new material developments in the last 24&ndash;48 hours (Sat 8/29 &ndash; Mon 8/31). Most recent items remain the Aug 17 Don David drill results and Aug 14 San Francisco program update, both already reflected in Catalyst Watch below. No confirmed earnings release found as of this close &mdash; see Catalyst Watch for the unsettled date.</p>
   </section>
 
   <!-- ============ TREND ESTIMATE ============ -->
   <section class="card">
     <div class="section-head"><h2>Short-Term Trend Estimate</h2></div>
-    <p class="trend-text">GORO closed today at $3.65, down 3.69% on volume roughly double its trailing average &mdash; consistent with the stock's pattern of unusually volatile, largely market-independent trading rather than a clear directional signal on its own. The session also falls on the company's estimated earnings date, with no report released as of this close; that print is the more likely near-term catalyst, set against weak GAAP profitability (TTM net margin &minus;138%) offset by genuinely positive levered free cash flow (+$36.9M) and a $46M, debt-free cash position. Eric Sprott's $1.27M open-market purchase near Diego's own cost basis, plus the interim CEO's roughly 1.1% stake, offer a real insider-conviction counterweight to weak accrual quality and thin, conflicting analyst coverage (CFRA Sell vs. LSEG Buy). Standing catalysts &mdash; the San Francisco resource and El Llano exploration target feeding a Q4 2026 restart study, ongoing Don David drill results, and Back Forty as longer-dated optionality &mdash; sit against a constructive gold macro backdrop, with mainstream desks projecting $4,000&ndash;$4,900/oz by year-end.</p>
+    <p class="trend-text">GORO closed today at $3.69, up 1.10% on volume roughly 15% below its trailing average &mdash; a quiet, modestly positive session after Friday's sharper drop, and not enough on its own to read as a directional signal given the stock's history of large, largely market-independent swings. Source estimates for the earnings date have drifted (Aug 28 originally, Yahoo now shows today, another estimate cites Sep 1 post-market) with no report confirmed released, leaving that print as an unresolved near-term catalyst rather than a settled one. Weak GAAP profitability (TTM net margin &minus;138%) and a high accruals reading are offset by genuinely positive levered free cash flow (+$36.9M) and a $46M, debt-free cash position. Eric Sprott's $1.27M open-market purchase near Diego's own cost basis, plus the interim CEO's roughly 1.1% stake, offer a real insider-conviction counterweight to thin, conflicting analyst coverage (CFRA Sell vs. LSEG Buy). Standing catalysts &mdash; the San Francisco resource and El Llano exploration target feeding a Q4 2026 restart study, ongoing Don David drill results, and Back Forty as longer-dated optionality &mdash; sit against a constructive gold macro backdrop, with mainstream desks projecting $4,000&ndash;$4,900/oz by year-end.</p>
     <div class="disclaimer">Informational only &mdash; not financial advice, and not a buy, sell, or hold recommendation.</div>
   </section>
 
@@ -470,8 +470,8 @@
       </div>
       <div class="fund-tile">
         <div class="label">Market Cap</div>
-        <div class="value">$494.3M</div>
-        <div class="sub">Live price × 135,419,619 basic shares ($552.1M fully diluted); Yahoo $492.4M / TradingView $505.1M cross-checks are close</div>
+        <div class="value">$499.7M</div>
+        <div class="sub">Live price × 135,419,619 basic shares ($558.1M fully diluted); Yahoo $497.76M / TradingView $489.65M cross-checks are close</div>
       </div>
       <div class="fund-tile">
         <div class="label">Beta</div>
@@ -481,7 +481,7 @@
       <div class="fund-tile">
         <div class="label">Moving Averages</div>
         <div class="value">$3.54 / $4.12</div>
-        <div class="sub">50-day / 200-day, last confirmed as of 8/20 close ($3.00); not recomputed live this run. Today's $3.65 sits above the last-confirmed 50-day and below the 200-day.</div>
+        <div class="sub">50-day / 200-day, last confirmed as of 8/20 close ($3.00); no fresher MA data found this run. Today's $3.69 sits above the last-confirmed 50-day and below the 200-day.</div>
       </div>
       <div class="fund-tile">
         <div class="label">Dividend</div>
@@ -518,11 +518,11 @@
   <section class="card">
     <div class="section-head"><h2>Volume &amp; Unusual Activity</h2></div>
     <div class="volume-row">
-      <span class="volume-stat">Today <b>1,856,875</b></span>
-      <div class="volume-bar-track"><div class="volume-bar-fill" style="width: 100%"></div></div>
-      <span class="volume-stat">Avg. <b>908,511</b></span>
+      <span class="volume-stat">Today <b>798,188</b></span>
+      <div class="volume-bar-track"><div class="volume-bar-fill" style="width: 85.2%"></div></div>
+      <span class="volume-stat">Avg. <b>936,844</b></span>
     </div>
-    <p class="trend-text" style="margin-top: 12px; font-size: 13.5px;">Today's volume ran roughly <b>104% above</b> the current trailing average (908,511, per Yahoo Finance) &mdash; itself already well above the pre-merger baseline of 793,208 (8/21/26). Elevated, above-average trading has been the norm since the merger closed, not a one-off spike.</p>
+    <p class="trend-text" style="margin-top: 12px; font-size: 13.5px;">Today's volume ran about <b>15% below</b> the current trailing average (936,844, per Yahoo Finance) &mdash; a quiet session, and roughly in line with the pre-merger baseline of 793,208 (8/21/26). No sign of unusual activity today; the trailing average itself remains well above that pre-merger baseline, consistent with elevated trading since the merger closed.</p>
   </section>
 
   <!-- ============ ANALYST COVERAGE ============ -->
@@ -540,7 +540,7 @@
         <span class="analyst-date">8/21/26</span>
       </div>
     </div>
-    <p class="trend-text" style="margin-top: 14px; font-size: 13.5px;">No rating dated after 8/22/26 was found superseding this split this run. Broader search shows only 2&ndash;3 analysts with targets ranging $1.25&ndash;$1.75 (consensus near $1.63); LSEG itself shows 0 covering analysts. Treat any single target as unreliable given how thin coverage is.</p>
+    <p class="trend-text" style="margin-top: 14px; font-size: 13.5px;">No rating dated after 8/22/26 was found superseding this split this run. A broader search surfaced older, likely stale/pre-merger targets in the $1.25&ndash;$1.66 range from limited coverage (e.g. HC Wainwright, dated 2025&ndash;early 2026) &mdash; not treated as current. LSEG itself shows 0 covering analysts. Treat any single target as unreliable given how thin coverage is.</p>
   </section>
 
   <!-- ============ CATALYST WATCH ============ -->
@@ -548,10 +548,10 @@
     <div class="section-head"><h2>Catalyst Watch</h2></div>
     <div class="catalyst-list">
       <div class="catalyst-item">
-        <span class="status-chip status-upcoming">Today</span>
+        <span class="status-chip status-watch">Watch</span>
         <div class="catalyst-body">
-          <div class="title">Q2/FY earnings (estimated Aug 28, 2026)</div>
-          <div class="desc">Per Yahoo Finance estimate; not yet released as of this 4:00 PM ET close.</div>
+          <div class="title">Earnings &mdash; date unresolved</div>
+          <div class="desc">Original Yahoo estimate was Aug 28, 2026; that date passed with no confirmed release. Source estimates now disagree (Yahoo currently shows today, 8/31; another estimate cites Sep 1 post-market). No actual results confirmed as of this close.</div>
         </div>
       </div>
       <div class="catalyst-item">
