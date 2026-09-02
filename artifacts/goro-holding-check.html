@@ -4,6 +4,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
+    color-scheme: light;
+    --page:#efece3;
+    --surface:#ffffff;
+    --surface-2:#f6f3ea;
+    --border:rgba(28,26,21,0.10);
+    --border-strong:rgba(28,26,21,0.20);
+    --text-primary:#1c1a15;
+    --text-secondary:#5c574a;
+    --text-muted:#8c8577;
+    --accent:#96650f;
+    --accent-strong:#5c4109;
+    --accent-soft:#f1e4c3;
+    --good:#0ca30c;
+    --good-soft:rgba(12,163,12,0.14);
+    --critical:#d03b3b;
+    --critical-soft:rgba(208,59,59,0.14);
+    --neutral-bar:#a3936c;
+    --neutral-bar-stroke:#7d6c47;
+    --shadow: 0 1px 2px rgba(28,26,21,0.06), 0 8px 24px -12px rgba(28,26,21,0.16);
+  }
+
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      color-scheme: dark;
+      --page:#0c0b09;
+      --surface:#1a160f;
+      --surface-2:#211b12;
+      --border:rgba(238,228,204,0.10);
+      --border-strong:rgba(238,228,204,0.18);
+      --text-primary:#f4efe2;
+      --text-secondary:#bdb29a;
+      --text-muted:#847a67;
+      --accent:#caa147;
+      --accent-strong:#e0bb63;
+      --accent-soft:rgba(202,161,71,0.13);
+      --neutral-bar:#8f8570;
+      --neutral-bar-stroke:#b0a483;
+      --shadow: 0 1px 0 rgba(255,255,255,0.03) inset, 0 12px 30px -18px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
     color-scheme: dark;
     --page:#0c0b09;
     --surface:#1a160f;
@@ -16,10 +57,6 @@
     --accent:#caa147;
     --accent-strong:#e0bb63;
     --accent-soft:rgba(202,161,71,0.13);
-    --good:#0ca30c;
-    --good-soft:rgba(30,163,44,0.14);
-    --critical:#e0504f;
-    --critical-soft:rgba(224,80,79,0.14);
     --neutral-bar:#8f8570;
     --neutral-bar-stroke:#b0a483;
     --shadow: 0 1px 0 rgba(255,255,255,0.03) inset, 0 12px 30px -18px rgba(0,0,0,0.6);
@@ -104,6 +141,8 @@
   .stat-tile .gl.down{color:var(--critical);}
   .stat-tile .cb{font-size:11.5px; color:var(--text-muted); margin-top:8px;}
 
+  .chart-subhead{font-size:13px; font-weight:600; color:var(--text-primary); margin-bottom:8px;}
+  .chart-divider{height:1px; background:var(--border); margin:22px 0 18px;}
   .chart-legend{display:flex; gap:18px; margin-bottom:6px; font-size:11.5px; color:var(--text-secondary);}
   .chart-legend span{display:inline-flex; align-items:center; gap:6px;}
   .swatch{width:11px; height:11px; border-radius:3px; display:inline-block;}
@@ -157,9 +196,23 @@
   .mini-row .v{color:var(--text-primary); font-family:"IBM Plex Mono", monospace; font-weight:600; text-align:right;}
   .flag{
     margin-top:10px; padding:9px 11px; border-radius:8px; background:var(--critical-soft);
-    border:1px solid rgba(224,80,79,0.3); font-size:12px; color:var(--text-secondary);
+    border:1px solid rgba(208,59,59,0.32); font-size:12px; color:var(--text-secondary);
   }
   .flag b{color:var(--text-primary);}
+
+  /* ---------- range indicators ---------- */
+  .range-block{margin-top:14px; max-width:320px;}
+  .range-caption{display:flex; justify-content:space-between; font-size:11px; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-muted); margin-bottom:6px;}
+  .range-track{position:relative; height:6px; border-radius:3px; background:var(--border-strong);}
+  .range-fill{position:absolute; top:0; bottom:0; left:0; border-radius:3px;}
+  .range-fill.up{background:var(--good);}
+  .range-fill.down{background:var(--critical);}
+  .range-fill.neutral{background:var(--accent);}
+  .range-dot{position:absolute; top:50%; width:11px; height:11px; border-radius:50%; border:2px solid var(--surface); transform:translate(-50%,-50%); box-shadow:0 0 0 1px var(--border-strong);}
+  .range-dot.up{background:var(--good);}
+  .range-dot.down{background:var(--critical);}
+  .range-dot.neutral{background:var(--accent);}
+  .range-ends{display:flex; justify-content:space-between; font-family:"IBM Plex Mono", monospace; font-size:11px; color:var(--text-secondary); margin-top:6px;}
 
   /* ---------- analyst ---------- */
   .analyst-row{display:flex; gap:14px; flex-wrap:wrap;}
@@ -229,6 +282,14 @@
       <span class="price-delta up num">▲ +$0.25 (+6.98%)</span>
       <span class="price-meta">prior close $3.58 · day range $3.59–$3.83 · open $3.63</span>
     </div>
+    <div class="range-block">
+      <div class="range-caption"><span>Day Range</span><span>at day high</span></div>
+      <div class="range-track">
+        <div class="range-fill up" style="width:100%;"></div>
+        <div class="range-dot up" style="left:100%;" title="Current $3.83"></div>
+      </div>
+      <div class="range-ends num"><span>$3.59</span><span>$3.83</span></div>
+    </div>
     <div class="badge-row">
       <span class="badge"><span class="src">Finnhub</span> price &amp; day range — live quote, source of record</span>
       <span class="badge"><span class="src">TradingView</span> cross-check <b>$3.82</b> — consistent · technical rating <b>Buy</b> (1-wk &amp; 1-mo)</span>
@@ -266,6 +327,48 @@
       </div>
     </div>
 
+    <div class="chart-subhead">Gain/Loss by Holding</div>
+    <div class="chart-legend">
+      <span><span class="swatch" style="background:var(--good);"></span>Gain</span>
+      <span><span class="swatch" style="background:var(--critical);"></span>Loss</span>
+    </div>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 480 290" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dollar and percent gain or loss for Merrill Lynch, Charles Schwab, and combined GORO holdings" style="min-width:400px; max-width:520px;">
+        <line x1="26" y1="140" x2="454" y2="140" stroke="var(--border-strong)" stroke-width="1"/>
+        <text x="20" y="144" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--text-muted)">0%</text>
+
+        <!-- Merrill Lynch: -0.6% / -$230 -->
+        <g>
+          <rect x="68" y="140" width="64" height="61.16" rx="3" fill="var(--critical)"><title>Merrill Lynch: −$230 (−0.6%)</title></rect>
+          <text x="100" y="217.16" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" fill="var(--critical)">▼ −0.6%</text>
+          <text x="100" y="231.16" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="var(--text-secondary)">−$230</text>
+          <text x="100" y="262" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="13" font-weight="600" fill="var(--text-primary)">Merrill Lynch</text>
+          <text x="100" y="276" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="var(--text-muted)">10,857 sh</text>
+        </g>
+
+        <!-- Charles Schwab: +0.8% / +$27 -->
+        <g>
+          <rect x="208" y="52.27" width="64" height="87.73" rx="3" fill="var(--good)"><title>Charles Schwab: +$27 (+0.8%)</title></rect>
+          <text x="240" y="44.27" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" fill="var(--good)">▲ +0.8%</text>
+          <text x="240" y="30.27" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="var(--text-secondary)">+$27</text>
+          <text x="240" y="262" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="13" font-weight="600" fill="var(--text-primary)">Charles Schwab</text>
+          <text x="240" y="276" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="var(--text-muted)">897 sh</text>
+        </g>
+
+        <!-- Combined: -0.4% / -$203 -->
+        <g>
+          <rect x="348" y="140" width="64" height="49.94" rx="3" fill="var(--critical)"><title>Combined: −$203 (−0.4%)</title></rect>
+          <text x="380" y="205.94" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" fill="var(--critical)">▼ −0.4%</text>
+          <text x="380" y="219.94" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="var(--text-secondary)">−$203</text>
+          <text x="380" y="262" text-anchor="middle" font-family="Work Sans, sans-serif" font-size="13" font-weight="600" fill="var(--text-primary)">Combined</text>
+          <text x="380" y="276" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="var(--text-muted)">11,754 sh</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="chart-divider"></div>
+
+    <div class="chart-subhead">Cost Basis vs. Current Value</div>
     <div class="chart-legend">
       <span><span class="swatch" style="background:var(--neutral-bar); border:1px solid var(--neutral-bar-stroke);"></span>Cost basis</span>
       <span><span class="swatch" style="background:var(--good);"></span>Current value — gain</span>
@@ -430,6 +533,13 @@
         <div class="mini-row"><span class="k">Trailing average volume</span><span class="v">963,051 sh</span></div>
         <div class="mini-row"><span class="k">Prior confirmed baseline avg (8/21/26)</span><span class="v">793,208 sh</span></div>
         <div class="mini-row"><span class="k">52-week range</span><span class="v">$1.87 – $6.56</span></div>
+        <div class="range-block" style="max-width:none; margin-top:10px;">
+          <div class="range-track">
+            <div class="range-fill neutral" style="width:41.8%;"></div>
+            <div class="range-dot neutral" style="left:41.8%;" title="Current $3.83 — 41.8% up the 52-week range"></div>
+          </div>
+          <div class="range-ends num"><span>$1.87</span><span>$6.56</span></div>
+        </div>
         <div class="flag" style="background:var(--accent-soft); border-color:var(--border-strong);">Session is roughly 90 minutes old — too early for a meaningful full-day-vs-average read. The trailing average itself has climbed markedly since the pre-merger $793,208 baseline, confirming elevated post-merger trading has become the norm rather than a one-off spike.</div>
       </div>
     </div>
