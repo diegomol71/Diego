@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 130">
+  <g transform="translate(10,10)">
+    <g fill="none" stroke-linecap="round">
+      <circle cx="55" cy="55" r="40" stroke="#c97d4e" stroke-width="5.5"
+        stroke-dasharray="217 314" stroke-dashoffset="-22" transform="rotate(-15 55 55)"/>
+      <circle cx="55" cy="55" r="29" stroke="#f4e5e1" stroke-width="5.5"
+        stroke-dasharray="149 227" stroke-dashoffset="-17" transform="rotate(95 55 55)"/>
+      <circle cx="55" cy="55" r="18" stroke="#8f6062" stroke-width="5.5"
+        stroke-dasharray="87 140" stroke-dashoffset="-11" transform="rotate(205 55 55)"/>
+    </g>
+    <circle cx="55" cy="55" r="4" fill="#c97d4e"/>
+  </g>
+  <text x="130" y="65" font-family="'Playfair Display', Georgia, 'Times New Roman', serif" font-size="46" fill="#f4e5e1">CoreStart</text>
+  <text x="132" y="93" font-family="'Inter', Arial, sans-serif" font-size="13" font-weight="600" letter-spacing="3" fill="#c97d4e">CORPORATE WELLNESS</text>
+</svg>

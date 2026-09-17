@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" rx="44" fill="#f4e5e1"/>
+  <g fill="none" stroke-linecap="round">
+    <circle cx="100" cy="100" r="72" stroke="#c97d4e" stroke-width="9"
+      stroke-dasharray="391 565" stroke-dashoffset="-40" transform="rotate(-15 100 100)"/>
+    <circle cx="100" cy="100" r="52" stroke="#262220" stroke-width="9"
+      stroke-dasharray="268 408" stroke-dashoffset="-30" transform="rotate(95 100 100)"/>
+    <circle cx="100" cy="100" r="32" stroke="#8f6062" stroke-width="9"
+      stroke-dasharray="156 251" stroke-dashoffset="-20" transform="rotate(205 100 100)"/>
+  </g>
+  <circle cx="100" cy="100" r="7" fill="#c97d4e"/>
+</svg>
