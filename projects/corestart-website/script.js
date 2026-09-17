@@ -12,8 +12,26 @@ navMenu.querySelectorAll('a').forEach(link => {
 
 const form = document.getElementById('contactForm');
 const note = document.getElementById('formNote');
-form.addEventListener('submit', (e) => {
+const INQUIRY_ENDPOINT = 'https://formsubmit.co/ajax/dmolina@ytdigital.com';
+
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  note.textContent = "Thanks! We've received your request and will reach out within one business day.";
-  form.reset();
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  note.textContent = 'Sending...';
+
+  try {
+    const response = await fetch(INQUIRY_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form),
+    });
+    if (!response.ok) throw new Error('Request failed');
+    note.textContent = "Thanks! We've received your request and will reach out within one business day.";
+    form.reset();
+  } catch (err) {
+    note.textContent = 'Something went wrong sending your request. Please try again shortly.';
+  } finally {
+    submitBtn.disabled = false;
+  }
 });
