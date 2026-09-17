@@ -90,7 +90,7 @@ h1, h2, h3, h4 {
   padding-top: 12px;
   padding-bottom: 12px;
 }
-.brand img { height: 42px; width: auto; }
+.brand img { height: 48px; width: auto; }
 .main-nav ul {
   list-style: none;
   display: flex;
@@ -383,7 +383,7 @@ section { padding: 96px 0; }
   gap: 20px;
 }
 .footer-brand { display: flex; align-items: center; gap: 16px; }
-.footer-brand img { height: 42px; border-radius: 6px; background: #fff; padding: 4px 8px; }
+.footer-brand img { height: 44px; width: auto; }
 .footer-brand p { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
 .footer-partner-link { color: #cfe6a8; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
 .footer-partner-link:hover { text-decoration: underline; }
