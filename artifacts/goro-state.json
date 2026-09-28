@@ -1,0 +1,44 @@
+{
+  "last_close": { "date": "2026-09-25", "price": 3.50, "prev_close": 3.52, "note": "2026-09-28 run was a live intraday check ($3.38, -3.43%), not a close" },
+  "shares": { "basic": 135701119, "fully_diluted": 151247574, "as_of": "2026-09-09", "pro_forma_basic": 169083445, "pro_forma_fd": 201321063, "pro_forma_as_of": "2026-09-25", "pro_forma_note": "135,701,119 + 33,382,326 new shares from the placement close; company's investors page cap table not yet updated to reflect this" },
+  "cash": { "amount": 166000000, "debt": 0, "as_of": "2026-09-25", "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26" },
+  "volume_avg": { "value": 1653297, "as_of": "2026-09-25", "source": "Yahoo trailing 30-day avg (computed, excl. partial 9/28 session)" },
+  "moving_avgs": { "ma50": 3.08, "ma200": 4.10, "as_of": "2026-09-25", "source": "Computed from Yahoo daily series" },
+  "week52": { "low": 1.87, "high": 6.56, "as_of": "2026-09-28" },
+  "analyst_ratings": [
+    { "source": "CFRA", "rating": "Sell", "date": "2026-08-22", "target": null },
+    { "source": "LSEG", "rating": "Buy", "date": "2026-08-21", "target": 1.75 }
+  ],
+  "insiders": [
+    { "who": "Eric Sprott / 2176423 Ontario Ltd.", "shares": 12154046, "warrants": 4460213, "pct_nondiluted": 0.072, "pct_partially_diluted": 0.096, "as_of": "2026-09-28", "note": "Bought 325,000 sh @ $3.893 on 8/14/26, then 994,300 units @ $3.65 (~$3.63M) on 9/28/26 in the placement. Pre-9/28 position was 10,934,746 sh / 3,963,063 warrants (~8.1%/10.7%); stake fell despite buying more, due to placement dilution. Crossed below 10% partially-diluted threshold on 9/28 and ceased to be an insider (early warning filing). This resolves the prior-run LSEG mismatch: LSEG's 7.9%/10.7M figure was roughly accurate pre-9/28." },
+    { "who": "Javier Reyes", "role": "Chairman & CEO (confirmed 2026-08-31, interim since 2026-07-27; reconfirmed as Chairman/CEO in 9/25/26 financing release)", "shares": 1520000, "pct_pro_forma_basic": 0.0090 }
+  ],
+  "catalysts": [
+    { "item": "$125M private placement close ($3.65/unit, upsized from $75M on 9/14)", "date": "2026-09-30", "status": "pending" },
+    { "item": "San Francisco technical restart study (Q4 2026), incl. 26,000m drill program", "date": "2026 Q4", "status": "pending" },
+    { "item": "San Francisco restart target (initial mining Q1 2027, full production H2 2027)", "date": "2027", "status": "pending" },
+    { "item": "Don David exploration (123 holes/25,726m drilled through 7/31 of 34,250m 2026 program)", "date": "ongoing", "status": "pending" },
+    { "item": "Back Forty stream agreement risk — missed 8/31/26 Osisko/OR Royalties permitting milestone; grace period extended through 11/30/26 for a further amendment; ~$37.2M advanced at risk if unresolved by then", "date": "2026-11-30", "status": "risk" },
+    { "item": "Next quarterly report (Q3 2026, estimated per stockanalysis.com)", "date": "2026-11-03", "status": "pending" },
+    { "item": "Luca Mining strategic investment closing — $75M for ~19.9% of Luca Mining Corp, tied to Luca's Cozamin Mine acquisition; subject to TSXV approval and Cozamin deal closing", "date": "watch", "status": "pending" }
+  ],
+  "fundamentals": {
+    "net_margin_ttm_pct": -138.44,
+    "net_loss_ttm": -54810000,
+    "eps_diluted_ttm": -0.84,
+    "levered_fcf_ttm": 36910000,
+    "current_ratio": 0.5,
+    "accruals_pct": 306.9,
+    "dividend": "none",
+    "beta": { "yahoo": -0.40, "lseg": 0.21, "lseg_correlation_pct": 6, "tradingview": 2.22 }
+  },
+  "news_seen": [
+    "Auditor change: Davidson & Company resigned eff. 9/10/26, BDO USA appointed (6-K 9/17)",
+    "Fed 25bp rate hike (to 3.75-4%) drove gold pullback/partial rebound 9/17",
+    "$125M private placement upsized from $75M, priced $3.65/unit (9/14)",
+    "Private placement closed at $121.8M (33,382,326 units @ $3.65), 60% above target (9/25)",
+    "Eric Sprott/2176423 Ontario bought 994,300 more units @ $3.65 in the placement, but stake fell to ~7.2%/9.6% and he ceased to be an insider (9/28)",
+    "Goldgroup committed $75M to Luca Mining Corp for ~19.9% stake, tied to Luca's Cozamin Mine acquisition, replacing Trafigura's backstop (9/28)"
+  ],
+  "last_run_utc": "2026-09-28T17:15:00Z"
+}
