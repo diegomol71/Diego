@@ -1,18 +1,15 @@
 {
   "last_close": {
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "price": 3.19,
-    "prev_close": 3.2,
-    "note": "4:00 PM ET close, -0.31%, range 3.15-3.28, Yahoo vol 652,737 (4pm print, possibly incomplete; -61% vs 30d avg)"
+    "prev_close": 3.19,
+    "note": "4:00 PM ET close, 0.00%, range 3.12-3.25, Yahoo vol 844,937 (-49.1% vs 30d avg)"
   },
   "shares": {
-    "basic": 135701119,
-    "fully_diluted": 151247574,
-    "as_of": "2026-09-09",
-    "pro_forma_basic": 169083445,
-    "pro_forma_fd": 201321063,
-    "pro_forma_as_of": "2026-09-25",
-    "pro_forma_note": "135,701,119 + 33,382,326 new shares from the placement close; company's investors page cap table not yet updated to reflect this"
+    "basic": 169118502,
+    "fully_diluted": 201327072,
+    "as_of": "2026-09-25",
+    "note": "Company site cap table updated to 9/25/26 (total incl. 250 restricted: 169,118,752)"
   },
   "cash": {
     "amount": 166000000,
@@ -21,20 +18,20 @@
     "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26"
   },
   "volume_avg": {
-    "value": 1679787,
-    "as_of": "2026-09-29",
-    "source": "Yahoo trailing 30 sessions through 9/29 (computed)"
+    "value": 1659943,
+    "as_of": "2026-09-30",
+    "source": "Yahoo trailing 30 sessions through 9/30 (computed)"
   },
   "moving_avgs": {
-    "ma50": 3.08,
+    "ma50": 3.09,
     "ma200": 4.1,
-    "as_of": "2026-09-30",
+    "as_of": "2026-10-01",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-09-30"
+    "as_of": "2026-10-01"
   },
   "analyst_ratings": [
     {
@@ -123,5 +120,5 @@
     "Goldgroup committed $75M to Luca Mining Corp for ~19.9% stake, tied to Luca's Cozamin Mine acquisition, replacing Trafigura's backstop (9/28)",
     "Luca Mining Cozamin acquisition (from Capstone) expected to close Q4 2026, pending antitrust and TSXV approval (9/30)"
   ],
-  "last_run_utc": "2026-09-30T21:20:00Z"
+  "last_run_utc": "2026-10-01T21:20:00Z"
 }
