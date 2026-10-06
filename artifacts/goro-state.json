@@ -1,9 +1,9 @@
 {
   "last_close": {
-    "date": "2026-10-05",
-    "price": 3.25,
-    "prev_close": 3.26,
-    "note": "4:00 PM ET close, -0.31%, range 3.09-3.30 (Finnhub), Yahoo vol 1,409,536 (-9.6% vs 30d avg 1,559,987)"
+    "date": "2026-10-06",
+    "price": 3.37,
+    "prev_close": 3.25,
+    "note": "4:00 PM ET close, +3.69%, range 3.22-3.37 (Finnhub), Yahoo vol 1,209,155 (-22.7% vs 30d avg 1,563,260)"
   },
   "shares": {
     "basic": 169118502,
@@ -18,20 +18,20 @@
     "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat)."
   },
   "volume_avg": {
-    "value": 1559987,
-    "as_of": "2026-10-02",
+    "value": 1563260,
+    "as_of": "2026-10-05",
     "source": "Yahoo prior 30 sessions (computed)"
   },
   "moving_avgs": {
-    "ma50": 3.13,
+    "ma50": 3.16,
     "ma200": 4.1,
-    "as_of": "2026-10-05",
+    "as_of": "2026-10-06",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-10-05"
+    "as_of": "2026-10-06"
   },
   "analyst_ratings": [
     {
@@ -120,5 +120,5 @@
     "Goldgroup committed $75M to Luca Mining Corp for ~19.9% stake, tied to Luca's Cozamin Mine acquisition, replacing Trafigura's backstop (9/28)",
     "Luca Mining Cozamin acquisition (from Capstone) expected to close Q4 2026, pending antitrust and TSXV approval (9/30)"
   ],
-  "last_run_utc": "2026-10-05T21:25:00Z"
+  "last_run_utc": "2026-10-06T21:30:00Z"
 }
