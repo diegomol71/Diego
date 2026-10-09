@@ -1,9 +1,9 @@
 {
   "last_close": {
-    "date": "2026-10-08",
-    "price": 3.19,
-    "prev_close": 3.28,
-    "note": "4:00 PM ET close, -2.74%, range 3.11-3.27 (Finnhub), Yahoo vol 1,645,112 (+11.2% vs 30d avg 1,479,347)"
+    "date": "2026-10-09",
+    "price": 3.41,
+    "prev_close": 3.19,
+    "note": "4:00 PM ET close, +6.90%, range 3.24-3.44 (Finnhub), Yahoo vol 1,522,246 (+4.1% vs 30d avg 1,462,627)"
   },
   "shares": {
     "basic": 169471539,
@@ -18,20 +18,20 @@
     "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat)."
   },
   "volume_avg": {
-    "value": 1479347,
-    "as_of": "2026-10-07",
+    "value": 1462627,
+    "as_of": "2026-10-08",
     "source": "Yahoo prior 30 sessions (computed)"
   },
   "moving_avgs": {
-    "ma50": 3.21,
+    "ma50": 3.23,
     "ma200": 4.09,
-    "as_of": "2026-10-08",
+    "as_of": "2026-10-09",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-10-08"
+    "as_of": "2026-10-09"
   },
   "analyst_ratings": [
     {
@@ -94,6 +94,11 @@
       "item": "Luca Mining strategic investment closing \u2014 $75M for ~19.9% of Luca Mining Corp, tied to Luca's Cozamin Mine acquisition; subject to TSXV approval and Cozamin deal closing; Luca expects Cozamin close in Q4 2026 (Mexican antitrust + TSXV approval)",
       "date": "watch",
       "status": "pending"
+    },
+    {
+      "item": "New Orleans Investment Conference (company events calendar); also Nov 9-11, Nov 18-19",
+      "date": "2026-10-28",
+      "status": "pending"
     }
   ],
   "fundamentals": {
@@ -120,5 +125,5 @@
     "Goldgroup committed $75M to Luca Mining Corp for ~19.9% stake, tied to Luca's Cozamin Mine acquisition, replacing Trafigura's backstop (9/28)",
     "Luca Mining Cozamin acquisition (from Capstone) expected to close Q4 2026, pending antitrust and TSXV approval (9/30)"
   ],
-  "last_run_utc": "2026-10-08T21:20:00Z"
+  "last_run_utc": "2026-10-09T21:30:00Z"
 }
