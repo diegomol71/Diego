@@ -1,9 +1,9 @@
 {
   "last_close": {
-    "date": "2026-10-15",
-    "price": 3.33,
-    "prev_close": 3.22,
-    "note": "4:00 PM ET close, +3.42%, range 3.19-3.35 (Finnhub); Yahoo vol 1,037,968 (-29.8% vs prior-30 avg 1,478,227)"
+    "date": "2026-10-16",
+    "price": 3.39,
+    "prev_close": 3.33,
+    "note": "4:00 PM ET close, +1.80%, range 3.31-3.50 (Finnhub); Yahoo vol 914,328 (-38.2% vs prior-30 avg 1,479,487)"
   },
   "shares": {
     "basic": 169471539,
@@ -18,20 +18,20 @@
     "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat)."
   },
   "volume_avg": {
-    "value": 1478227,
-    "as_of": "2026-10-14",
+    "value": 1479487,
+    "as_of": "2026-10-15",
     "source": "Yahoo prior 30 sessions (computed)"
   },
   "moving_avgs": {
-    "ma50": 3.32,
+    "ma50": 3.35,
     "ma200": 4.06,
-    "as_of": "2026-10-15",
+    "as_of": "2026-10-16",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-10-15"
+    "as_of": "2026-10-16"
   },
   "analyst_ratings": [
     {
@@ -129,7 +129,8 @@
     "Private placement closed at $121.8M (33,382,326 units @ $3.65), 60% above target (9/25)",
     "Eric Sprott/2176423 Ontario bought 994,300 more units @ $3.65 in the placement, but stake fell to ~7.2%/9.6% and he ceased to be an insider (9/28)",
     "Goldgroup committed $75M to Luca Mining Corp for ~19.9% stake, tied to Luca's Cozamin Mine acquisition, replacing Trafigura's backstop (9/28)",
-    "Luca Mining Cozamin acquisition (from Capstone) expected to close Q4 2026, pending antitrust and TSXV approval (9/30)"
+    "Luca Mining Cozamin acquisition (from Capstone) expected to close Q4 2026, pending antitrust and TSXV approval (9/30)",
+    "Luca Mining closed C$211M subscription-receipt financing for Cozamin acquisition (secondary source, 10/14)"
   ],
-  "last_run_utc": "2026-10-15T21:25:00Z"
+  "last_run_utc": "2026-10-16T21:30:00Z"
 }
