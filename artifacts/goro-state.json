@@ -1,9 +1,9 @@
 {
   "last_close": {
-    "date": "2026-10-19",
-    "price": 3.4,
-    "prev_close": 3.39,
-    "note": "4:00 PM ET close, +0.29%, range 3.345-3.44, open 3.38 (Finnhub); Yahoo vol 1,134,966 (-20.1% vs prior-30 avg 1,420,617)"
+    "date": "2026-10-20",
+    "price": 3.41,
+    "prev_close": 3.4,
+    "note": "4:00 PM ET close, +0.29%, range 3.32-3.54, open 3.40 (Finnhub); Yahoo vol 751,345 (-46.3% vs prior-30 avg 1,398,723)"
   },
   "shares": {
     "basic": 169471539,
@@ -18,20 +18,20 @@
     "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat)."
   },
   "volume_avg": {
-    "value": 1420617,
-    "as_of": "2026-10-16",
+    "value": 1398723,
+    "as_of": "2026-10-19",
     "source": "Yahoo prior 30 sessions (computed)"
   },
   "moving_avgs": {
-    "ma50": 3.37,
+    "ma50": 3.39,
     "ma200": 4.05,
-    "as_of": "2026-10-19",
+    "as_of": "2026-10-20",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-10-19"
+    "as_of": "2026-10-20"
   },
   "analyst_ratings": [
     {
@@ -132,5 +132,5 @@
     "Luca Mining Cozamin acquisition (from Capstone) expected to close Q4 2026, pending antitrust and TSXV approval (9/30)",
     "Luca Mining closed C$211M subscription-receipt financing for Cozamin acquisition (secondary source, 10/14)"
   ],
-  "last_run_utc": "2026-10-19T21:20:00Z"
+  "last_run_utc": "2026-10-20T21:30:00Z"
 }
