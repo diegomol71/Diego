@@ -1,9 +1,9 @@
 {
   "last_close": {
-    "date": "2026-10-21",
-    "price": 3.48,
-    "prev_close": 3.41,
-    "note": "4:00 PM ET close, +2.05%, range 3.342-3.50, open 3.43 (Finnhub); Yahoo vol 817,111 (-38.2% vs prior-30 avg 1,321,377)"
+    "date": "2026-10-22",
+    "price": 3.35,
+    "prev_close": 3.48,
+    "note": "4:00 PM ET close, -3.74%, range 3.26-3.46, open 3.38 (Finnhub); Yahoo vol 1,266,153 (+1.0% vs prior-30 avg 1,253,980)"
   },
   "shares": {
     "basic": 169471539,
@@ -15,23 +15,23 @@
     "amount": 166000000,
     "debt": 0,
     "as_of": "2026-09-25",
-    "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat)."
+    "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat). 10/14-15: Luca investment completed (~101.1M receipts @ C$1.00, ~US$75M), so ~$91M pro forma is inferred, not reported."
   },
   "volume_avg": {
-    "value": 1321377,
-    "as_of": "2026-10-20",
+    "value": 1253980,
+    "as_of": "2026-10-21",
     "source": "Yahoo prior 30 sessions (computed)"
   },
   "moving_avgs": {
-    "ma50": 3.41,
-    "ma200": 4.04,
-    "as_of": "2026-10-21",
+    "ma50": 3.42,
+    "ma200": 4.03,
+    "as_of": "2026-10-22",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-10-21"
+    "as_of": "2026-10-22"
   },
   "analyst_ratings": [
     {
@@ -97,7 +97,7 @@
       "status": "pending"
     },
     {
-      "item": "Luca Mining strategic investment closing \u2014 $75M for ~19.9% of Luca Mining Corp, tied to Luca's Cozamin Mine acquisition; subject to TSXV approval and Cozamin deal closing; Luca expects Cozamin close in Q4 2026 (Mexican antitrust + TSXV approval)",
+      "item": "Luca Mining Cozamin acquisition closing (Goldgroup's ~US$75M funded 10/14 as subscription receipts; converts to ~19.9% of Luca on Cozamin close; Luca expects Q4 2026, pending Mexican antitrust + TSXV)",
       "date": "watch",
       "status": "pending"
     },
@@ -130,7 +130,8 @@
     "Eric Sprott/2176423 Ontario bought 994,300 more units @ $3.65 in the placement, but stake fell to ~7.2%/9.6% and he ceased to be an insider (9/28)",
     "Goldgroup committed $75M to Luca Mining Corp for ~19.9% stake, tied to Luca's Cozamin Mine acquisition, replacing Trafigura's backstop (9/28)",
     "Luca Mining Cozamin acquisition (from Capstone) expected to close Q4 2026, pending antitrust and TSXV approval (9/30)",
-    "Luca Mining closed C$211M subscription-receipt financing for Cozamin acquisition (secondary source, 10/14)"
+    "Luca Mining closed C$211M subscription-receipt financing for Cozamin acquisition (secondary source, 10/14)",
+    "Goldgroup completed Luca investment: ~101.1M receipts @ C$1.00 (~US$75M), 10/14-15; Cozamin close unconfirmed"
   ],
-  "last_run_utc": "2026-10-21T21:30:00Z"
+  "last_run_utc": "2026-10-22T21:20:00Z"
 }
