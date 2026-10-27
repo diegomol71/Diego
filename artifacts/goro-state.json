@@ -1,9 +1,9 @@
 {
   "last_close": {
-    "date": "2026-10-26",
-    "price": 3.12,
-    "prev_close": 3.3,
-    "note": "Finnhub close -5.45%, range 3.05-3.31, open 3.31; Yahoo vol 1,353,145 (+8.2% vs prior-30 avg 1,251,003); TradingView showed 3.075, mkt cap 524.2M"
+    "date": "2026-10-27",
+    "price": 3.2,
+    "prev_close": 3.12,
+    "note": "Finnhub close +2.56%, range 3.035-3.23, open 3.15; Yahoo vol 1,340,928 (+6.3% vs prior-30 avg 1,261,023); TradingView mkt cap 497.8M (implies ~155.6M sh, +0.48% day)"
   },
   "shares": {
     "basic": 169471539,
@@ -18,20 +18,20 @@
     "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat). 10/14-15: Luca investment completed (~101.1M receipts @ C$1.00, ~US$75M), so ~$91M pro forma is inferred, not reported."
   },
   "volume_avg": {
-    "value": 1251003,
-    "as_of": "2026-10-23",
+    "value": 1261023,
+    "as_of": "2026-10-26",
     "source": "Yahoo prior 30 sessions (computed)"
   },
   "moving_avgs": {
     "ma50": 3.44,
-    "ma200": 4.02,
-    "as_of": "2026-10-26",
+    "ma200": 4.01,
+    "as_of": "2026-10-27",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-10-26"
+    "as_of": "2026-10-27"
   },
   "analyst_ratings": [
     {
@@ -92,7 +92,7 @@
       "status": "risk"
     },
     {
-      "item": "Next quarterly report (Q3 2026, estimated per stockanalysis.com)",
+      "item": "Next quarterly report (Q3 2026, estimated per stockanalysis.com); TradingView lists Nov 18",
       "date": "2026-11-03",
       "status": "pending"
     },
@@ -133,5 +133,5 @@
     "Luca Mining closed C$211M subscription-receipt financing for Cozamin acquisition (secondary source, 10/14)",
     "Goldgroup completed Luca investment: ~101.1M receipts @ C$1.00 (~US$75M), 10/14-15; Cozamin close unconfirmed"
   ],
-  "last_run_utc": "2026-10-26T21:20:00Z"
+  "last_run_utc": "2026-10-27T21:30:00Z"
 }
