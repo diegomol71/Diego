@@ -1,15 +1,15 @@
 {
   "last_close": {
-    "date": "2026-10-27",
-    "price": 3.2,
-    "prev_close": 3.12,
-    "note": "Finnhub close +2.56%, range 3.035-3.23, open 3.15; Yahoo vol 1,340,928 (+6.3% vs prior-30 avg 1,261,023); TradingView mkt cap 497.8M (implies ~155.6M sh, +0.48% day)"
+    "date": "2026-10-28",
+    "price": 3.32,
+    "prev_close": 3.2,
+    "note": "Finnhub close +3.75%, range 3.22-3.36, open 3.22; Yahoo vol 1,234,584 (-3.2% vs prior-30 avg 1,275,730); TradingView mkt cap 505.57M (implies ~152M sh)"
   },
   "shares": {
-    "basic": 169471539,
-    "fully_diluted": 201327070,
-    "as_of": "2026-10-07",
-    "note": "Company site cap table as of 10/7/26 (total incl. 250 restricted: 169,471,789)"
+    "basic": 169471789,
+    "fully_diluted": 201317938,
+    "as_of": "2026-10-20",
+    "note": "Company site cap table 10/20/26: total issued 169,471,789; common line reads 170,217,460 (internally inconsistent); FD 201,317,938"
   },
   "cash": {
     "amount": 166000000,
@@ -18,20 +18,20 @@
     "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat). 10/14-15: Luca investment completed (~101.1M receipts @ C$1.00, ~US$75M), so ~$91M pro forma is inferred, not reported."
   },
   "volume_avg": {
-    "value": 1261023,
-    "as_of": "2026-10-26",
+    "value": 1275730,
+    "as_of": "2026-10-27",
     "source": "Yahoo prior 30 sessions (computed)"
   },
   "moving_avgs": {
-    "ma50": 3.44,
-    "ma200": 4.01,
-    "as_of": "2026-10-27",
+    "ma50": 3.46,
+    "ma200": 4.0,
+    "as_of": "2026-10-28",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-10-27"
+    "as_of": "2026-10-28"
   },
   "analyst_ratings": [
     {
@@ -100,11 +100,6 @@
       "item": "Luca Mining Cozamin acquisition closing (Goldgroup's ~US$75M funded 10/14 as subscription receipts; converts to ~19.9% of Luca on Cozamin close; Luca expects Q4 2026, pending Mexican antitrust + TSXV)",
       "date": "watch",
       "status": "pending"
-    },
-    {
-      "item": "New Orleans Investment Conference (company events calendar); also Nov 9-11, Nov 18-19",
-      "date": "2026-10-28",
-      "status": "pending"
     }
   ],
   "fundamentals": {
@@ -133,5 +128,5 @@
     "Luca Mining closed C$211M subscription-receipt financing for Cozamin acquisition (secondary source, 10/14)",
     "Goldgroup completed Luca investment: ~101.1M receipts @ C$1.00 (~US$75M), 10/14-15; Cozamin close unconfirmed"
   ],
-  "last_run_utc": "2026-10-27T21:30:00Z"
+  "last_run_utc": "2026-10-28T21:25:00Z"
 }
