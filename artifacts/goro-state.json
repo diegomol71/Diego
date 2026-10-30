@@ -1,9 +1,9 @@
 {
   "last_close": {
-    "date": "2026-10-29",
-    "price": 3.28,
-    "prev_close": 3.32,
-    "note": "Finnhub close -1.20%, range 3.20-3.335, open 3.23; Yahoo vol 1,125,007 (-9.2% vs prior-30 avg 1,238,803); TradingView price 3.26, mkt cap 505.57M"
+    "date": "2026-10-30",
+    "price": 3.16,
+    "prev_close": 3.28,
+    "note": "Finnhub close -3.66%, range 3.05-3.235, open 3.20; Yahoo vol 7,097,258 (+483% vs prior-30 avg 1,217,010); TradingView mkt cap ~518M"
   },
   "shares": {
     "basic": 169471789,
@@ -18,20 +18,20 @@
     "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat). 10/14-15: Luca investment completed (~101.1M receipts @ C$1.00, ~US$75M), so ~$91M pro forma is inferred, not reported."
   },
   "volume_avg": {
-    "value": 1238803,
-    "as_of": "2026-10-28",
+    "value": 1217010,
+    "as_of": "2026-10-29",
     "source": "Yahoo prior 30 sessions (computed)"
   },
   "moving_avgs": {
     "ma50": 3.47,
-    "ma200": 4.0,
-    "as_of": "2026-10-29",
+    "ma200": 3.99,
+    "as_of": "2026-10-30",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-10-29"
+    "as_of": "2026-10-30"
   },
   "analyst_ratings": [
     {
@@ -128,5 +128,5 @@
     "Luca Mining closed C$211M subscription-receipt financing for Cozamin acquisition (secondary source, 10/14)",
     "Goldgroup completed Luca investment: ~101.1M receipts @ C$1.00 (~US$75M), 10/14-15; Cozamin close unconfirmed"
   ],
-  "last_run_utc": "2026-10-29T21:30:00Z"
+  "last_run_utc": "2026-10-30T21:25:00Z"
 }
