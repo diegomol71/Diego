@@ -1,15 +1,15 @@
 {
   "last_close": {
-    "date": "2026-11-03",
-    "price": 2.84,
-    "prev_close": 2.81,
-    "note": "Finnhub close +1.07%, range 2.58-2.85, open 2.80; Yahoo vol 1,295,467 (-6.9% vs prior-30 avg 1,391,830); TradingView mkt cap $498M/$448M (inconsistent)"
+    "date": "2026-11-04",
+    "price": 3.08,
+    "prev_close": 2.84,
+    "note": "Finnhub close +8.45%, range 2.92-3.135, open 2.97; Yahoo vol 1,118,001 (-19.0% vs prior-30 avg 1,379,973)"
   },
   "shares": {
-    "basic": 169471789,
-    "fully_diluted": 201317938,
-    "as_of": "2026-10-20",
-    "note": "Company site cap table 10/20/26: total issued 169,471,789; common line reads 170,217,460 (internally inconsistent); FD 201,317,938 Company site FD 201,317,938 re-checked 11/3."
+    "basic": 170395210,
+    "fully_diluted": 201267938,
+    "as_of": "2026-11-03",
+    "note": "Company site cap table 11/3/26: common 170,394,960 + restricted 250 = 170,395,210; FD 201,267,938"
   },
   "cash": {
     "amount": 166000000,
@@ -18,20 +18,20 @@
     "note": "Post $121.8M placement close; pro forma ~$91M after pending $75M Luca Mining investment funds. Prior confirmed level was ~$59M pro forma as of 6/30/26 Company site 10/2 still shows US$46M cash as of June 2026 (stale hero stat). 10/14-15: Luca investment completed (~101.1M receipts @ C$1.00, ~US$75M), so ~$91M pro forma is inferred, not reported."
   },
   "volume_avg": {
-    "value": 1391830,
-    "as_of": "2026-11-02",
+    "value": 1379973,
+    "as_of": "2026-11-03",
     "source": "Yahoo prior 30 sessions (computed)"
   },
   "moving_avgs": {
-    "ma50": 3.45,
-    "ma200": 3.96,
-    "as_of": "2026-11-03",
+    "ma50": 3.43,
+    "ma200": 3.95,
+    "as_of": "2026-11-04",
     "source": "Computed from Yahoo daily series"
   },
   "week52": {
     "low": 1.87,
     "high": 6.56,
-    "as_of": "2026-11-03"
+    "as_of": "2026-11-04"
   },
   "analyst_ratings": [
     {
@@ -128,5 +128,5 @@
     "Luca Mining closed C$211M subscription-receipt financing for Cozamin acquisition (secondary source, 10/14)",
     "Goldgroup completed Luca investment: ~101.1M receipts @ C$1.00 (~US$75M), 10/14-15; Cozamin close unconfirmed"
   ],
-  "last_run_utc": "2026-11-03T21:25:00Z"
+  "last_run_utc": "2026-11-04T21:20:00Z"
 }
